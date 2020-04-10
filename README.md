@@ -1,4 +1,4 @@
-# escape-plan
+# Text-based Game
 
 Team Member:
 - VINCENT 3035663538
