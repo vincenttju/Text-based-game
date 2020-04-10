@@ -7,13 +7,12 @@ Team Member:
 ## **Game Description:**
 Escape plan is an uncompromising horror survival text-based game full of challenges and mystery. Feel the tense as you are trapped in a strange and gloomy world full of mysterious creatures, dangers, and surprises. Gather resources and clues to find your way out.
 
-Plot :
 One day, you wake up with a sick head lying on the floor in a dark room filled with an unpleasant odor around you. You don't remember who you are or how you got here? You don’t know what kind of mysterious thing is approaching you ahead. The only important thing is that you have to survive. 
 
 **Basic Game Rules:**
 Objectives:
 - In this game, you will experience a number of situations, in the result of your commands and choices. You will be prompted to perform valid commands based on the current situation. If you performed an invalid command or unavailable situation, you will need to reenter your command. 
-- The player is required to find a way out from the map by collecting required adventure items, completing certain tasks, solving riddles and going on the right path.  Throughout the game, the player need to input valid commands in the form of:
+- The player is required to find a way out from the map by collecting required adventure items, completing certain tasks, solving riddles and going on the right path without being killed by the Monster. Throughout the game, the player need to input valid commands in the form of:
 
 ***COMMANDS OBJECT***  
 [The command should only consist of 2 lowercase words, command and object, and separated by space “ “]
