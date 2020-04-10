@@ -5,9 +5,11 @@ Team Member:
 - HAFI KHOIRUL 3035663021
 
 ## **Game Description:**
-Escape plan is an uncompromising horror survival text-based game full of challenges and mystery. Feel the tense as you are trapped in a strange and gloomy world full of mysterious creatures, dangers, and surprises. Gather resources and clues to find your way out.
+One Night at Nowhere is an uncompromising horror survival text-based game full of challenges and mystery. Feel the tense as you are trapped in a strange and gloomy world full of mysterious creatures, dangers, and surprises. Gather resources and clues to find your way out.
 
 One day, you wake up with a sick head lying on the floor in a dark room filled with an unpleasant odor around you. You don't remember who you are or how you got here? You don’t know what kind of mysterious thing is approaching you ahead. The only important thing is that you have to survive. 
+
+Genre : Survival, Mistery, Horror
 
 **Basic Game Rules:**
 Objectives:
