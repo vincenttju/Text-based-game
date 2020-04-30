@@ -16,6 +16,13 @@ void mainMenu(){
   cout << "  Be careful of him, human flesh is his favourite  " << endl;
   cout << "---------------------------------------------------" << endl;
 }
+void doCommand(){
+  cout <<  "Your command" << endl;
+  string command;
+  getline(cin, command);
+  string word;
+  if (
+}
 int main(){
   int My_LocationY = 0;
   int My_LocationX = 0;
