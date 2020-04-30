@@ -30,6 +30,6 @@ int main(){
   int Yme = rand() % 3;
   int Xme = rand() % 3;
   int map[3][3];
-  
+  generateRoom(Yme, Xme);
   mainMenu();
 }
