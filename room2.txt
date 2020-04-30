@@ -1,3 +1,4 @@
 You are in a dark and broken bedroom.
 Inside the room, there is a scroll beside a mysterious body.
-You can go south, west, or east.
+You can take these items.
+You can go south, west, or east after that.
