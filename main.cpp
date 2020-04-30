@@ -24,9 +24,12 @@ void doCommand(){
   string word;
   if (
 }
+  
 int main(){
-  int My_LocationY = 0;
-  int My_LocationX = 0;
+  srand(time(NULL));
+  int Yme = rand() % 3;
+  int Xme = rand() % 3;
   int map[3][3];
+  
   mainMenu();
 }
