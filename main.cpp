@@ -17,6 +17,8 @@ void mainMenu(){
   cout << "---------------------------------------------------" << endl;
 }
 int main(){
+  int My_LocationY = 0;
+  int My_LocationX = 0;
   int map[3][3];
   mainMenu();
 }
