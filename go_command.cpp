@@ -3,11 +3,16 @@
 #include "generateRoom.h"
 using namespace std;
 
-void goCommand(int &y, int &x, string userInput, int map[][3]){
-  int roomNumber = (x + 1) + (y*3);
+void go_command(int &y, int &x, string userInput, int map[][3]){
   if (userInput == "go north"){
-    y -= 1;
-    x += 0;
+    if (map[y][x] == 1 || map[y][x] == 2 || map[y][x] == 3){
+      cout << "----- You cannot go there -----" << endl;
+      doCommand();
+    }
+    else{
+      y -= 1;
+      x += 0;
+    }
   }
   else if (userInput == "go south"){
     y -= 1;
