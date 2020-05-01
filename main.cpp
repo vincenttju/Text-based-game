@@ -87,7 +87,7 @@ int main(){
       map[y][x] = value;
     }
   }
-  //generateRoom(map[Yposition][Xposition]);
+  //generateRoom(Yposition, Xposition);
   mainMenu();
   doCommand();
 }
