@@ -78,8 +78,8 @@ void doCommand(){
 
 int main(){
   srand(time(NULL));
-  int Yme = rand() % 3;
-  int Xme = rand() % 3;
+  int Yposition = rand() % 3;
+  int Xposition = rand() % 3;
   int map[3][3];
   for (int y=0; y<3; y++){
     for (int x=0; x<3; x++){
@@ -87,7 +87,7 @@ int main(){
       map[y][x] = value;
     }
   }
-  //generateRoom(Yme, Xme);
+  //generateRoom(Yposition, Xposition);
   mainMenu();
   doCommand();
 }
