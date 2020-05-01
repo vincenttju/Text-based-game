@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <sstream>
+#include <string>
+#include <cctype>
 using namespace std;
 
 void mainMenu(){
@@ -23,6 +25,18 @@ void mainMenu(){
   cout << "   Be careful of him, human flesh is his favourite    " << endl;
   cout << "------------------------------------------------------" << endl;
 }
+bool commandCheck(string commands[]){
+  for (int i = 0 ; i < 2; i++){
+    for (int j = 0; j < commands[i].length();j++){
+      if (isupper(commands[i][j])){
+        cout << "--------- Invalid Command --------" << endl;
+        cout << "--Command should be in lowercase--" << endl;
+        return true;
+      }
+    }
+  }
+  return 0;
+}
 void command(int &count, string commands[]){
   string command, word;
   bool x = true;
@@ -39,8 +53,12 @@ void command(int &count, string commands[]){
       count++;
     }
     x = false;
-    if (count != 2)
-      cout << "--- Invalid Command ---" << endl;
+    if (count != 2){
+      cout << "--------- Invalid Command --------" << endl;
+      cout << "--Command should be 2 words long--" << endl;
+    }
+    if (commandCheck(commands))
+      count = 0;
   }
 }
 void doCommand(){
