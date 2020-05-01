@@ -43,7 +43,7 @@ void command(int &count, string commands[]){
   string command, word;
   bool x = true;
   while(x){
-    cout <<  "Your command" << endl;
+    cout <<  "------> Please input your command : " << endl;
     getline(cin, command);
     istringstream line_in(command);
     while(line_in >> word){
