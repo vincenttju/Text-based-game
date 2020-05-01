@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
+#include "generateRoom.h"
 using namespace std;
 
-void goCommand(int &y, int &x, string userInput){
+void goCommand(int &y, int &x, string userInput, int map[][3]){
   int roomNumber = (x + 1) + (y*3);
   if (userInput == "go north"){
     y -= 1;
