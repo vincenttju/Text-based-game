@@ -81,6 +81,12 @@ int main(){
   int Yme = rand() % 3;
   int Xme = rand() % 3;
   int map[3][3];
+  for (int y=0; y<3; y++){
+    for (int x=0; x<3; x++){
+      int value = ((x+1)+(y*3));
+      map[y][x] = value;
+    }
+  }
   //generateRoom(Yme, Xme);
   mainMenu();
   doCommand();
