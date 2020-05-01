@@ -21,7 +21,7 @@ void mainMenu(){
   cout << "           or you will be dead by one night           " << endl;
   cout << "  Find the unique items scattered around the mansion  " << endl;
   cout << "            and use it in the ancient gate            " << endl;
-  cout << " Find also another pieces of clues to get out of here " << endl;
+  cout << "   Find several pieces of clues to get out of here    " << endl;
   cout << "   Be careful of him, human flesh is his favourite    " << endl;
   cout << "------------------------------------------------------" << endl;
 }
