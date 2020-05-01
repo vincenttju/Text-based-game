@@ -1,1 +1,4 @@
-You are now in a 
+You are now in a dining room with a torch hanging in the wall. 
+In the center of the table, there is a silicon bullet and an old letter.
+You can take these items if you haven't.
+You can go south, north, east, or west after that.
