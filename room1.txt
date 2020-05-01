@@ -1,5 +1,5 @@
 You are in a rotten bedroom, the cold air chills your bone as you enter the room.
 In front of you, you can see mysterious blood splatters in almost every corner of the room.
 There is an unknown key and an old flashlight lying on the desk.
-You can take these items.
+You can take these items if you haven't.
 You can go south or east after that.
