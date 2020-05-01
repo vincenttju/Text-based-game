@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "generateRoom.H"
+#include "generateRoom.h"
 using namespace std;
 
 void generateRoom(int Y, int X){
