@@ -26,6 +26,53 @@ void mainMenu(){
   cout << "------------------------------------------------------" << endl;
 }
 
+bool commandCheck(string commands[]){
+  for (int i = 0 ; i < 2; i++){
+    for (int j = 0; j < commands[i].length();j++){
+      if (isupper(commands[i][j])){
+        cout << "--------- Invalid Command --------" << endl;
+        cout << "--Command should be in lowercase--" << endl;
+        return true;
+      }
+    }
+  }
+  return 0;
+}
+
+void command(int &count, string commands[]){
+  string command, word;
+  bool x = true;
+  while(x){
+    cout <<  "Your command" << endl;
+    getline(cin, command);
+    istringstream line_in(command);
+    while(line_in >> word){
+      if (count >= 2){
+        count = 0;
+        break;
+      }
+      commands[count] = word;
+      count++;
+    }
+    x = false;
+    if (count != 2){
+      cout << "--------- Invalid Command --------" << endl;
+      cout << "--Command should be 2 words long--" << endl;
+    }
+    if (commandCheck(commands))
+      count = 0;
+  }
+}
+
+void doCommand(){
+  string commands[2];
+  int count = 0;
+  while (count != 2){
+    count = 0;
+    command(count, commands);
+  }
+}
+
 int main(){
   srand(time(NULL));
   int Yme = rand() % 3;
