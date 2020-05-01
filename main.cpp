@@ -41,6 +41,7 @@ bool commandCheck(string commands[]){
 }
 
 void command(int &count, string commands[]){
+  string inputUser;
   string command, word;
   bool x = true;
   while(x){
@@ -63,6 +64,7 @@ void command(int &count, string commands[]){
     if (commandCheck(commands))
       count = 0;
   }
+  inputUser += command;
 }
 
 void doCommand(){
