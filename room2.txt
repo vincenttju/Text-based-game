@@ -1,4 +1,5 @@
-You are in a dark and broken bedroom.
-Inside the room, there is an old letter beside a mysterious body.
+You are now in a living room filled with old stuff. 
+On the wall, there is a message written in blood saying "YOU DIE".
+Besides the sofa, there is an old picture and a rope.
 You can take these items if you haven't.
-You can go south, west, or east after that.
+You can go south, east, or west after that.
