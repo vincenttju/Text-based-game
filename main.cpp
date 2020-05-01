@@ -3,6 +3,7 @@
 #include <sstream>
 #include <string>
 #include <cctype>
+#include "generateRoom.h"
 using namespace std;
 
 void mainMenu(){
