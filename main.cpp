@@ -31,11 +31,31 @@ bool commandCheck(string commands[]){
   for (int i = 0 ; i < 2; i++){
     for (int j = 0; j < commands[i].length();j++){
       if (isupper(commands[i][j])){
-        cout << "--------- Invalid Command --------" << endl;
-        cout << "--Command should be in lowercase--" << endl;
+        cout << "\n------------- Invalid Command -------------" << endl;
+        cout <<   "------Command should be in lowercase-------" << endl;
         return true;
       }
     }
+  }
+  return 0;
+}
+
+bool commandCheck2(string commands[]){
+  string commandsList[7] = {"go", "take", "examine", "open", "use", "answer", "quit"};
+  int commandFound = 0;
+  for ( int i = 0; i < 7; i++){
+    if (commands[0] == commandsList[i])
+    {
+      commandFound++;
+      break;
+    }
+  }
+
+  if (commandFound == 0){
+    cout << "\n------------- Invalid Command -------------" << endl;
+    cout <<   "-------------  Valid command: -------------" << endl;
+    cout <<   " go, take, examine, open, use, answer, quit" << endl;
+    return true;
   }
   return 0;
 }
@@ -45,7 +65,7 @@ void command(int &count, string commands[]){
   string command, word;
   bool x = true;
   while(x){
-    cout <<  "------> Please input your command : " << endl;
+    cout <<  "\n------> Please input your command : " << endl;
     getline(cin, command);
     istringstream line_in(command);
     while(line_in >> word){
@@ -58,10 +78,12 @@ void command(int &count, string commands[]){
     }
     x = false;
     if (count != 2){
-      cout << "--------- Invalid Command --------" << endl;
-      cout << "--Command should be 2 words long--" << endl;
+      cout << "\n------------- Invalid Command -------------" << endl;
+      cout <<   "------Command should be 2 words long-------" << endl;
     }
     if (commandCheck(commands))
+      count = 0;
+    if (commandCheck2(commands))
       count = 0;
   }
   inputUser += command;
@@ -70,6 +92,7 @@ void command(int &count, string commands[]){
 void doCommand(){
   string commands[2];
   int count = 0;
+
   while (count != 2){
     count = 0;
     command(count, commands);
