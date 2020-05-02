@@ -27,6 +27,26 @@ void mainMenu(){
   cout << "------------------------------------------------------" << endl;
 }
 
+bool nounCheck(string commands[]){
+  string nounList[5] = {"key", "rope", "torch", "phone", "gun"};
+  int nounFound = 0;
+  for (int i = 0; i < 5; i++){
+    if (commands[1] == nounList[i])
+    {
+      nounFound++;
+      break;
+    }
+  }
+  
+  if (nounFound == 0){
+    cout << "\n--------------- Invalid Item --------------" << endl;
+    cout <<   "---------------- Valid Items: -------------" << endl;
+    cout <<   "------ key, rope, torch, phone, gun  ------" << endl;
+    return true;
+  }
+  return 0;
+}
+
 bool commandCheck(string commands[]){
   for (int i = 0 ; i < 2; i++){
     for (int j = 0; j < commands[i].length();j++){
@@ -53,7 +73,7 @@ bool commandCheck2(string commands[]){
 
   if (commandFound == 0){
     cout << "\n------------- Invalid Command -------------" << endl;
-    cout <<   "-------------  Valid command: -------------" << endl;
+    cout <<   "-------------  Valid commands: ------------" << endl;
     cout <<   " go, take, examine, open, use, answer, quit" << endl;
     return true;
   }
@@ -84,6 +104,8 @@ void command(int &count, string commands[]){
     if (commandCheck(commands))
       count = 0;
     if (commandCheck2(commands))
+      count = 0;
+    if (nounCheck(commands))
       count = 0;
   }
   inputUser += command;
