@@ -4,8 +4,8 @@
 #include "generateRoom.h"
 using namespace std;
 
-void generateRoom(int Y, int X){
-  int roomNumber = (X + 1) + (Y*3);
+void generateRoom(int y, int x){
+  int roomNumber = ((x+1)+(y*3));
   string rN = to_string(roomNumber);
   string roomfile = "room" + rN  + ".txt";
 
