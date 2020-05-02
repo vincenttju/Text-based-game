@@ -6,6 +6,12 @@
 #include "generateRoom.h"
 using namespace std;
 
+Struct listItems{
+  int room;
+  string item1;
+  string item2;
+};
+
 void mainMenu(){
   string name;
   cout << "************ Welcome to One Night Game ************" << endl;
@@ -122,6 +128,12 @@ void doCommand(){
 }
 
 int main(){
+  
+  listItems love[9];
+  love[].room = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+  love[].item1 = { "key", "picture" , "letter", "pan", "bullet", "0", "rope", "battery", "torch" };
+  love[].item2 = { "flashlight" , "phone" ,  "gun",  "fruits", "letter", "0", "0", "key",  "mail" };
+  
   srand(time(NULL));
   int Yposition = rand() % 3;
   int Xposition = rand() % 3;
