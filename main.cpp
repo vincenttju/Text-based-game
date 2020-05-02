@@ -13,7 +13,7 @@ struct listItems{
 };
 
 void mainMenu(){
-  string name;
+  string name, firstInput;
   cout << "************ Welcome to One Night Game ************" << endl;
   cout << "Hello, please enter your name." << endl;
   getline(cin, name);
@@ -31,6 +31,14 @@ void mainMenu(){
   cout << "   Find several pieces of clues to get out of here    " << endl;
   cout << "   Be careful of him, human flesh is his favourite    " << endl;
   cout << "------------------------------------------------------" << endl;
+  cout << "You can go north" << endl;
+  cout <<  "\n------> Please input your command : " << endl;
+  getline(cin, firstInput);
+  while (firstInput != "go north"){
+    cout << "------------- Invalid Command -------------" << endl;
+    cout <<  "\n------> Please input your command : " << endl;
+    getline(cin, firstInput);
+  }
 }
 
 bool nounCheck(string commands[]){
