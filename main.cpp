@@ -32,11 +32,12 @@ void mainMenu(){
   cout << "   Be careful of him, human flesh is his favourite    " << endl;
   cout << "------------------------------------------------------" << endl;
   cout << "You can go north" << endl;
-  cout <<  "\n------> Please input your command : " << endl;
+  cout <<  "------> Please input your command : " << endl;
   getline(cin, firstInput);
   while (firstInput != "go north"){
     cout << "------------- Invalid Command -------------" << endl;
-    cout <<  "\n------> Please input your command : " << endl;
+    cout << "-------- Valid Command : go north ---------" << endl;
+    cout << "------> Please input your command : " << endl;
     getline(cin, firstInput);
   }
 }
