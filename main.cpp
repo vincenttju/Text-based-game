@@ -81,7 +81,7 @@ bool commandCheck2(string commands[]){
 }
 
 void command(int &count, string commands[]){
-  string inputUser;
+  
   string command, word;
   bool x = true;
   while(x){
@@ -108,7 +108,7 @@ void command(int &count, string commands[]){
     if (nounCheck(commands))
       count = 0;
   }
-  inputUser += command;
+  
 }
 
 void doCommand(){
