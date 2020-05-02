@@ -14,6 +14,7 @@ void go_command(int &y, int &x, string userInput){
     else{
       y -= 1;
       x += 0;
+      generateRoom(y, x);
     }
   }
   
@@ -25,6 +26,7 @@ void go_command(int &y, int &x, string userInput){
     else{
       y += 1;
       x += 0;
+      generateRoom(y, x);
     }
   }
   
@@ -36,6 +38,7 @@ void go_command(int &y, int &x, string userInput){
     else{
       y += 0;
       x += 1;
+      generateRoom(y, x);
     }
   }
   
@@ -47,7 +50,8 @@ void go_command(int &y, int &x, string userInput){
     else{
       y += 0;
       x -= 1;
+      generateRoom(y, x);
     }
   }
-  generateRoom(y, x);
+  
 }
