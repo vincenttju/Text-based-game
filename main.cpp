@@ -130,10 +130,16 @@ void doCommand(){
 int main(){
   
   listItems love[9];
-  love[].room = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-  love[].item1 = { "key", "picture" , "letter", "pan", "bullet", "0", "rope", "battery", "torch" };
-  love[].item2 = { "flashlight" , "phone" ,  "gun",  "fruits", "letter", "0", "0", "key",  "mail" };
-  
+  love[0] = { 1, "key", "flashlight" };
+  love[1] = { 2, "picture" , "phone" };
+  love[2] = { 3, "letter", "gun" };
+  love[3] = { 4, "pan" , "fruits" };
+  love[4] = { 5, "bullet", "letter" };
+  love[5] = { 6, "0", "0" };
+  love[6] = { 7, "rope", "0" };
+  love[7] = { 8, "battery", "key" };
+  love[8] = { 9, "torch", "mail" };
+
   srand(time(NULL));
   int Yposition = rand() % 3;
   int Xposition = rand() % 3;
