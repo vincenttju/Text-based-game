@@ -6,7 +6,7 @@
 #include "generateRoom.h"
 using namespace std;
 
-Struct listItems{
+struct listItems{
   int room;
   string item1;
   string item2;
