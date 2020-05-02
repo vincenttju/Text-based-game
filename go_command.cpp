@@ -6,7 +6,7 @@ using namespace std;
 void go_command(int &y, int &x, string userInput){
   int roomNumber = ((x+1)+(y*3));
   
-  if (userInput == "go north"){
+  if (userInput == "north"){
     if (roomNumber == 1 || roomNumber == 2 || roomNumber == 3){
       cout << "----- You cannot go there -----" << endl;
       
@@ -17,7 +17,7 @@ void go_command(int &y, int &x, string userInput){
     }
   }
   
-  else if (userInput == "go south"){
+  else if (userInput == "south"){
     if (roomNumber == 7 || roomNumber == 8 || roomNumber == 9){
       cout << "----- You cannot go there -----" << endl;
       
@@ -28,7 +28,7 @@ void go_command(int &y, int &x, string userInput){
     }
   }
   
-  else if (userInput == "go east"){
+  else if (userInput == "east"){
     if (roomNumber == 3 || roomNumber == 6 || roomNumber == 9){
       cout << "----- You cannot go there -----" << endl;
       
@@ -39,7 +39,7 @@ void go_command(int &y, int &x, string userInput){
     }
   }
   
-  else if (userInput == "go west"){
+  else if (userInput == "west"){
     if (roomNumber == 1 || roomNumber == 4 || roomNumber == 7){
       cout << "----- You cannot go there -----" << endl;
       
