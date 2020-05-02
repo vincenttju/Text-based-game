@@ -3,6 +3,7 @@
 #include <sstream>
 #include <string>
 #include <cctype>
+#include "generateRoom.h"
 using namespace std;
 
 void mainMenu(){
@@ -40,6 +41,7 @@ bool commandCheck(string commands[]){
 }
 
 void command(int &count, string commands[]){
+  string inputUser;
   string command, word;
   bool x = true;
   while(x){
@@ -62,6 +64,7 @@ void command(int &count, string commands[]){
     if (commandCheck(commands))
       count = 0;
   }
+  inputUser += command;
 }
 
 void doCommand(){
@@ -75,10 +78,16 @@ void doCommand(){
 
 int main(){
   srand(time(NULL));
-  int Yme = rand() % 3;
-  int Xme = rand() % 3;
+  int Yposition = rand() % 3;
+  int Xposition = rand() % 3;
   int map[3][3];
-  //generateRoom(Yme, Xme);
+  for (int y=0; y<3; y++){
+    for (int x=0; x<3; x++){
+      int value = ((x+1)+(y*3));
+      map[y][x] = value;
+    }
+  }
+  //generateRoom(Yposition, Xposition);
   mainMenu();
   doCommand();
 }
