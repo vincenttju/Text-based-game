@@ -3,7 +3,7 @@
 #include "generateRoom.h"
 using namespace std;
 
-void go_command(int &y, int &x){
+void go_command(int &y, int &x, string userInput){
   int roomNumber = ((x+1)+(y*3));
   
   if (userInput == "north"){
