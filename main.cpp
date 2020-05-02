@@ -117,7 +117,7 @@ void command(int &count, string commands[]){
   
 }
 
-void doCommand(){
+void doCommand(int &y, int &x){
   string commands[2];
   int count = 0;
 
@@ -126,8 +126,8 @@ void doCommand(){
     command(count, commands);
   }
   
-  //if (commands[0] == "go")
-  //  go_command(int &y, int &x, string userInput);
+  if (commands[0] == "go")
+    go_command(y, x);
   
   //if (commands[0] == "take")
   //  take_command();
@@ -170,5 +170,5 @@ int main(){
   }
   //generateRoom(Yposition, Xposition);
   mainMenu();
-  doCommand();
+  doCommand(Yposition, Xposition);
 }
