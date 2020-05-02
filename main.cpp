@@ -125,6 +125,24 @@ void doCommand(){
     count = 0;
     command(count, commands);
   }
+  
+  //if (commands[0] == "go")
+  //  go_command(int &y, int &x, string userInput);
+  
+  //if (commands[0] == "take")
+  //  take_command();
+  
+  //if (commands[0] == "examine")
+  //  examine_command();
+  
+  //if (commands[0] == "open")
+  //  open_command();
+  
+  //if (commands[0] == "use")
+  //  use_command();
+  
+  //if (commands[0] == "answer")
+  //  answer_command();
 }
 
 int main(){
