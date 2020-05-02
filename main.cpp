@@ -127,7 +127,7 @@ void doCommand(int &y, int &x){
   }
   
   if (commands[0] == "go")
-    go_command(y, x);
+    go_command(y, x, commands[1]);
   
   //if (commands[0] == "take")
   //  take_command();
@@ -168,7 +168,8 @@ int main(){
       map[y][x] = value;
     }
   }
-  //generateRoom(Yposition, Xposition);
+  
   mainMenu();
+  //generateRoom(Yposition, Xposition);
   doCommand(Yposition, Xposition);
 }
