@@ -4,6 +4,7 @@
 #include <string>
 #include <cctype>
 #include "generateRoom.h"
+#include "go_command.h"
 using namespace std;
 
 struct listItems{
