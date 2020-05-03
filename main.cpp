@@ -54,9 +54,9 @@ bool nounCheck(string commands[]){
   }
 
   if (nounFound == 0){
-    cout << "\n--------------- Invalid Item --------------" << endl;
-    cout <<   "---------------- Valid Items: -------------" << endl;
-    cout <<   "------ key, rope, torch, phone, gun  ------" << endl;
+    cout << "\n--------------- Invalid Noun --------------" << endl;
+    cout <<   "------------- Some Valid Noun: -----------" << endl;
+    cout <<   "--- game, key, rope, torch, phone, gun  --" << endl;
     return true;
   }
   return 0;
@@ -138,8 +138,8 @@ bool doCommand(int &y, int &x){
   if (commands[0] == "quit")
     return 0;
   
-  //else if (commands[0] == "go")
-//    go_command(y, x, commands[1]);
+  else if (commands[0] == "go")
+    go_command(y, x, commands[1]);
 
   //else if (commands[0] == "take")
   //  take_command();
