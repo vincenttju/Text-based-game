@@ -52,7 +52,7 @@ bool nounCheck(string commands[]){
       break;
     }
   }
-  
+
   if (nounFound == 0){
     cout << "\n--------------- Invalid Item --------------" << endl;
     cout <<   "---------------- Valid Items: -------------" << endl;
@@ -96,7 +96,7 @@ bool commandCheck2(string commands[]){
 }
 
 void command(int &count, string commands[]){
-  
+
   string command, word;
   bool x = true;
   while(x){
@@ -123,7 +123,7 @@ void command(int &count, string commands[]){
     if (nounCheck(commands))
       count = 0;
   }
-  
+
 }
 
 void doCommand(int &y, int &x){
@@ -134,28 +134,28 @@ void doCommand(int &y, int &x){
     count = 0;
     command(count, commands);
   }
-  
-  if (commands[0] == "go")
-    go_command(y, x, commands[1]);
-  
+
+  //if (commands[0] == "go")
+//    go_command(y, x, commands[1]);
+
   //if (commands[0] == "take")
   //  take_command();
-  
+
   //if (commands[0] == "examine")
   //  examine_command();
-  
+
   //if (commands[0] == "open")
   //  open_command();
-  
+
   //if (commands[0] == "use")
   //  use_command();
-  
+
   //if (commands[0] == "answer")
   //  answer_command();
 }
 
 int main(){
-  
+
   listItems love[9];
   love[0] = { 1, "key", "flashlight" };
   love[1] = { 2, "picture" , "phone" };
@@ -177,7 +177,7 @@ int main(){
       map[y][x] = value;
     }
   }
-  
+
   mainMenu();
   //generateRoom(Yposition, Xposition);
   doCommand(Yposition, Xposition);
