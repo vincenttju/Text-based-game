@@ -43,9 +43,9 @@ void mainMenu(){
 }
 
 bool nounCheck(string commands[]){
-  string nounList[5] = {"key", "rope", "torch", "phone", "gun"};
+  string nounList[17] = {"north", "south", "east", "west","key", "rope", "torch", "phone", "gun", "flashlight", "picture", "letter", "pan", "fruits", "bullet", "battery", "mail"};
   int nounFound = 0;
-  for (int i = 0; i < 5; i++){
+  for (int i = 0; i < 17; i++){
     if (commands[1] == nounList[i])
     {
       nounFound++;
