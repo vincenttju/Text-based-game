@@ -43,9 +43,9 @@ void mainMenu(){
 }
 
 bool nounCheck(string commands[]){
-  string nounList[17] = {"north", "south", "east", "west","key", "rope", "torch", "phone", "gun", "flashlight", "picture", "letter", "pan", "fruits", "bullet", "battery", "mail"};
+  string nounList[18] = {"north", "south", "east", "west","key", "rope", "torch", "phone", "gun", "flashlight", "picture", "letter", "pan", "fruits", "bullet", "battery", "mail", "game"};
   int nounFound = 0;
-  for (int i = 0; i < 17; i++){
+  for (int i = 0; i < 18; i++){
     if (commands[1] == nounList[i])
     {
       nounFound++;
@@ -126,7 +126,7 @@ void command(int &count, string commands[]){
 
 }
 
-void doCommand(int &y, int &x){
+bool doCommand(int &y, int &x){
   string commands[2];
   int count = 0;
 
@@ -134,24 +134,29 @@ void doCommand(int &y, int &x){
     count = 0;
     command(count, commands);
   }
-
-  //if (commands[0] == "go")
+  
+  if (commands[0] == "quit")
+    return 0;
+  
+  //else if (commands[0] == "go")
 //    go_command(y, x, commands[1]);
 
-  //if (commands[0] == "take")
+  //else if (commands[0] == "take")
   //  take_command();
 
-  //if (commands[0] == "examine")
+  //else if (commands[0] == "examine")
   //  examine_command();
 
-  //if (commands[0] == "open")
+  //else if (commands[0] == "open")
   //  open_command();
 
-  //if (commands[0] == "use")
+  //else if (commands[0] == "use")
   //  use_command();
 
-  //if (commands[0] == "answer")
+  //else if (commands[0] == "answer")
   //  answer_command();
+  
+  return true;
 }
 
 int main(){
@@ -180,5 +185,5 @@ int main(){
 
   mainMenu();
   //generateRoom(Yposition, Xposition);
-  doCommand(Yposition, Xposition);
+  while (doCommand(Yposition, Xposition));
 }
