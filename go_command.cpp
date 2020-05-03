@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "generateRoom.h"
+#include "go_command.h"
 using namespace std;
 
 void go_command(int &y, int &x, string userInput){
