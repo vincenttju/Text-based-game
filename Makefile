@@ -9,7 +9,7 @@ goCommand.o: go_command.cpp go_command.h generateRoom.h
 main.o: main.cpp go_command.h
 	g++ $(FLAGS) -c $<
 	
-main: generateRoom.o go_command.o main.o m
+main: generateRoom.o go_command.o main.o 
 	g++ $(FLAGS) $^ -o $@
 
 clean:
