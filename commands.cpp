@@ -56,6 +56,7 @@ void take_command(int y, int x, string invertory[], string itemTaken, int &items
   if ((itemTaken == love[roomNumber].item1) || (itemTaken == love[roomNumber].item2)){
     invertory[itemsCarried] += itemTaken;
     itemsCarried += 1;
+    cout << itemTaken" << " is taken into the inventory" << endl;
   }
   else{
     cout << "invalid items!" << endl;
