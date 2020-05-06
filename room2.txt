@@ -2,4 +2,4 @@ You are now in a living room filled with old stuff.
 On the wall, there is a message written in blood saying "YOU DIE".
 Besides the sofa, there is an old picture and an old phone.
 You can take these items if you haven't.
-You can go south, east, or west after that.
+You can go south, east, or west
