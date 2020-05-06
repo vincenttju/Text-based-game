@@ -1,4 +1,4 @@
 Now, you are in the ancient gate. This is the exit!
 However, the gate is locked.
 You must find a way to open it.
-You can go north, south, or west.
+You can go north, south, or west
