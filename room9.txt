@@ -1,4 +1,4 @@
 You are in a strange room filled with blood splatter in every corner.
 There is a torch and an old mail in the corner.
 You can take these items if you haven't.
-You can go north or west after that.
+You can go north or west 
