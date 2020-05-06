@@ -74,7 +74,7 @@ void command(int &count, string commands[]){
 
 }
 
-bool doCommand(int &y, int &x, string invertory[], int &count, struct listItems love[]){
+bool doCommand(int &y, int &x, string invertory[], int &itemsCarried, struct listItems love[]){
   string commands[2];
   int count = 0;
 
@@ -90,7 +90,7 @@ bool doCommand(int &y, int &x, string invertory[], int &count, struct listItems 
     go_command(y, x, commands[1]);
 
   else if (commands[0] == "take")
-    take_command(y, x, invertory, commands[1], count, love);
+    take_command(y, x, invertory, commands[1], itemsCarried, love);
 
   //else if (commands[0] == "examine")
   //  examine_command();
@@ -131,12 +131,12 @@ int main(){
     }
   }
   
-  int count=0;
-  string * invertory = new string [count+1];
+  int itemsCarried=0;
+  string * invertory = new string [itemsCarried+1];
   
   mainMenu();
   //generateRoom(Yposition, Xposition);
-  while (doCommand(Yposition, Xposition, invertory, count, love));
+  while (doCommand(Yposition, Xposition, invertory, itemsCarried, love));
   
   delete []invertory;
   return 0;
