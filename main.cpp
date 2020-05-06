@@ -190,4 +190,7 @@ int main(){
   mainMenu();
   //generateRoom(Yposition, Xposition);
   while (doCommand(Yposition, Xposition, invertory, count, love));
+  
+  delete []invertory;
+  return 0;
 }
