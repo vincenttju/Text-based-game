@@ -49,12 +49,12 @@ void go_command(int &y, int &x, string userInput){
   }
 }
 
-void take_command(int y, int x, string invertory[], string itemTaken, int &count, struct listItems love[]){
+void take_command(int y, int x, string invertory[], string itemTaken, int &itemsCarried, struct listItems love[]){
   int roomNumber = ((x)+(y*3));
   
   if ((itemTaken == love[roomNumber].item1) || (itemTaken == love[roomNumber].item2)){
-    invertory[count] += itemTaken;
-    count += 1;
+    invertory[itemsCarried] += itemTaken;
+    itemsCarried += 1;
   }
   else{
     cout << "invalid items!" << endl;
