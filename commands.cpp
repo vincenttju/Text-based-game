@@ -10,7 +10,6 @@ void go_command(int &y, int &x, string userInput){
   if (userInput == "north"){
     if (roomNumber == 1 || roomNumber == 2 || roomNumber == 3){
       cout << "----- You cannot go there -----" << endl;
-      
     }
     else{
       y -= 1;
@@ -18,11 +17,9 @@ void go_command(int &y, int &x, string userInput){
       generateRoom(y, x);
     }
   }
-  
   else if (userInput == "south"){
     if (roomNumber == 7 || roomNumber == 8 || roomNumber == 9){
       cout << "----- You cannot go there -----" << endl;
-      
     }
     else{
       y += 1;
@@ -30,11 +27,9 @@ void go_command(int &y, int &x, string userInput){
       generateRoom(y, x);
     }
   }
-  
   else if (userInput == "east"){
     if (roomNumber == 3 || roomNumber == 6 || roomNumber == 9){
       cout << "----- You cannot go there -----" << endl;
-      
     }
     else{
       y += 0;
@@ -42,11 +37,9 @@ void go_command(int &y, int &x, string userInput){
       generateRoom(y, x);
     }
   }
-  
   else if (userInput == "west"){
     if (roomNumber == 1 || roomNumber == 4 || roomNumber == 7){
       cout << "----- You cannot go there -----" << endl;
-      
     }
     else{
       y += 0;
@@ -54,7 +47,6 @@ void go_command(int &y, int &x, string userInput){
       generateRoom(y, x);
     }
   }
-  
 }
 
 void take_command(int y, int x, string invertory[], string itemTaken, int &count, struct listItems love[]){
