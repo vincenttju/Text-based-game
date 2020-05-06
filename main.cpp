@@ -127,7 +127,7 @@ void command(int &count, string commands[]){
 
 }
 
-bool doCommand(int &y, int &x){
+bool doCommand(int &y, int &x, string invertory[], int &count, struct listItems love[]){
   string commands[2];
   int count = 0;
 
@@ -142,8 +142,8 @@ bool doCommand(int &y, int &x){
   else if (commands[0] == "go")
     go_command(y, x, commands[1]);
 
-  //else if (commands[0] == "take")
-  //  take_command();
+  else if (commands[0] == "take")
+    take_command(y, x, invertory, commands[1], count, love);
 
   //else if (commands[0] == "examine")
   //  examine_command();
@@ -183,8 +183,11 @@ int main(){
       map[y][x] = value;
     }
   }
-
+  
+  int count=0;
+  string * invertory = new string [count+1];
+  
   mainMenu();
   //generateRoom(Yposition, Xposition);
-  while (doCommand(Yposition, Xposition));
+  while (doCommand(Yposition, Xposition, invertory, count, love));
 }
