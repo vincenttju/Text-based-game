@@ -2,4 +2,4 @@ Now, you are in a balcony.
 In front of you, there is only darkness you can see and silence you can hear.
 However, there is a rope lying on the floor.
 You can take these items if you haven't.
-You can go north or east after that.
+You can go north or east
