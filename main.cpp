@@ -8,6 +8,16 @@
 #include "commandCheck.h"
 using namespace std;
 
+void grow_inventory(string * &invertory, int &inventorySize, int n){
+  string * new_inventory = new string [inventorySize + n];
+  for (int i = 0; i < inventorySize; i++){
+    new_inventory[i] = invertory[i]
+  }
+  delete [] invertory;
+  invertory = new_inventory;
+  inventorySize += n;
+  cout << "Inventory size increased" << endl; // cout hanya buat test bisa work atau kagak
+}
 void mainMenu(){
   string name, firstInput;
   cout << "************ Welcome to One Night Game ************" << endl;
