@@ -5,15 +5,18 @@ generateRoom.o: generateRoom.cpp generateRoom.h
 
 goCommand.o: go_command.cpp go_command.h generateRoom.h
 	g++ $(FLAGS) -c $<
-	
-main.o: main.cpp go_command.h
+
+commandCheck.o: commandCheck.cpp commandCheck.h
 	g++ $(FLAGS) -c $<
 	
-main: generateRoom.o go_command.o main.o 
+main.o: main.cpp go_command.h commandCheck.h
+	g++ $(FLAGS) -c $<
+	
+main: generateRoom.o go_command.o main.o commandCheck.o
 	g++ $(FLAGS) $^ -o $@
 
 clean:
-	rm -f main generateRoom.o go_command.o main.o room.tgz
+	rm -f main generateRoom.o go_command.o main.o commandCheck.o room.tgz
 
 tar:
 	tar -czvf room.tgz *.cpp *.h
