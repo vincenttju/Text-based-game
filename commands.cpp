@@ -2,6 +2,7 @@
 #include <string>
 #include "generateRoom.h"
 #include "commands.h"
+#include "struct.h"
 using namespace std;
 
 void go_command(int &y, int &x, string userInput){
