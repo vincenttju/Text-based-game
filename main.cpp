@@ -3,15 +3,12 @@
 #include <sstream>
 #include <string>
 #include <cctype>
-#include "go_command.h"
+#include "struct.h"
+#include "commands.h"
 #include "commandCheck.h"
 using namespace std;
 
-struct listItems{
-  int room;
-  string item1;
-  string item2;
-};
+
 
 void mainMenu(){
   string name, firstInput;
