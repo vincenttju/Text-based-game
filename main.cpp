@@ -8,8 +8,6 @@
 #include "commandCheck.h"
 using namespace std;
 
-
-
 void mainMenu(){
   string name, firstInput;
   cout << "************ Welcome to One Night Game ************" << endl;
@@ -132,7 +130,7 @@ int main(){
   string * invertory = new string [itemsCarried+1];
   
   mainMenu();
-  //generateRoom(Yposition, Xposition);
+
   while (doCommand(Yposition, Xposition, invertory, itemsCarried, love));
   
   delete []invertory;
