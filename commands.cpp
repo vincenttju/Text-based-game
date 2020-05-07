@@ -139,7 +139,7 @@ void item_function(string item, int roomNumber){
     cout << "This item cannot be examined" << endl;
 }
 
-void item_usage(string item, int room){
+void item_usage(string item, int room, bool lastMission){
   string usedItems[10];
   int count = 0;
   
@@ -155,6 +155,7 @@ void item_usage(string item, int room){
   
   else if ((item == "torch") && (room == 6)){
     if (usedItems[0] == "key"){
+      lastMission = true;
       usedItems[count] = "torch";
       count++;
       cout << "You have just burned the vine." << endl;
@@ -221,7 +222,7 @@ void examine_command(int y, int x, string itemExamined, string * &inventory, int
   }
 }
 
-void use_command(int y, int x, string itemUsed, string * &inventory, int inventorySize){
+void use_command(int y, int x, string itemUsed, string * &inventory, int inventorySize, bool lastMission){
   int roomNumber = ((x+1)+(y*3));
   int count1 = 0;
   string Uitem;
@@ -233,7 +234,7 @@ void use_command(int y, int x, string itemUsed, string * &inventory, int invento
     for (int i=0; i<inventorySize; i++){
       if (itemUsed == inventory[i]){
         Uitem = itemUsed;
-        item_usage(Uitem, roomNumber);
+        item_usage(Uitem, roomNumber, lastMission);
         count1++;
         break;
       }
