@@ -1,3 +1,4 @@
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 GAME RULES :
 - You can input several commmands suh as :
     --> go
@@ -5,4 +6,6 @@ GAME RULES :
     --> examine
     --> use
     --> view inventory
-    
+- Input must be consist of 2 words and lowercase.
+- You can abandon the game by inputting "quit game".
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
