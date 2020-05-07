@@ -1,0 +1,8 @@
+GAME RULES :
+- You can input several commmands suh as :
+    --> go
+    --> take
+    --> examine
+    --> use
+    --> view inventory
+    
