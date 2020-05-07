@@ -140,6 +140,32 @@ void item_function(string item, int roomNumber){
 }
 
 void item_usage(string item, int room){
+  if ((item == "key") && (room == 6)){
+    cout << "gate is unlocked" << endl;
+  }
+  
+  else if ((item == "key") && (room != 6)){
+    cout << "You cannot use it here!" << endl;
+  }
+  
+  else if ((item == "torch") && (room == 6)){
+    cout << "You have just burned the vine." << endl;
+    cout << "Now the path is clear. " << endl;
+  }
+  
+  else if ((item == "torch") && (room != 6)){
+    cout << "You have just burned the entire room." << endl;
+    cout << "You need to get out otherwise you are dead." << endl;
+  }
+  
+  else if (item == "flashlight"){
+    cout << "The flashlight need a battery." << endl;
+  }
+  
+  else if (item == "battery"){
+    cout << "You cannot use it, " << endl;
+    cout << "The battery is dead." << endl;
+  }
   
 }
 
