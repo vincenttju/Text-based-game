@@ -130,7 +130,7 @@ int main(){
   }
   
   else{
-    cout << "Invalid answer! You have to input (yes) to continue" << endl;
+    cout << "Invalid answer! You have to input yes (lowercase) to continue" << endl;
     cout << "Bye-bye, " << name << "!" << endl;
     
   }
