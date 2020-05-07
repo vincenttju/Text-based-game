@@ -134,6 +134,11 @@ void item_function(string item, int roomNumber){
     cout << " banana, apple, mango, and orange  " << endl;
     cout << " You cannot eat these garbage! " << endl;
   }
+  
+  else if (item == "bullet"){
+    cout << " It is a sillicon bullet!" << endl;
+    cout << " This item is very useful, dont waste it!" << endl;
+  }
 
   else
     cout << "This item cannot be examined" << endl;
