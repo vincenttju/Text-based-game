@@ -75,8 +75,8 @@ void take_command(int y, int x, string * &inventory, string itemTaken, int &item
   }
 }
 
-void item_function(string item, int y, int x){
-  int roomNumber = ((x+1)+(y*3));
+void item_function(string item, int roomNumber){
+  
   if ((item == "drawer") && (roomNumber == 3)){
     cout << "There is a notepad and a gun inside a drawer." << endl;
     cout << "You can take these items if you haven't." << endl;
@@ -139,6 +139,10 @@ void item_function(string item, int y, int x){
     cout << "This item cannot be examined" << endl;
 }
 
+void item_usage(string item, int room){
+  
+}
+
 void examine_command(int y, int x, string itemExamined, string * &inventory, int inventorySize){
   int count1=0;
   int roomNumber = ((x+1)+(y*3));
@@ -151,7 +155,7 @@ void examine_command(int y, int x, string itemExamined, string * &inventory, int
     for (int i=0; i<inventorySize; i++){
       if (itemExamined == inventory[i] || itemExamined == "drawer"){
         Xitem = itemExamined;
-        item_function(itemExamined, y, x);
+        item_function(itemExamined, roomNumber);
         count1++;
         break;
       }
@@ -176,7 +180,7 @@ void use_command(int y, int x, string itemUsed, string * &inventory, int invento
     for (int i=0; i<inventorySize; i++){
       if (itemUsed == inventory[i]){
         Uitem = itemUsed;
-        item_function(Uitem, roomNumber);
+        item_usage(Uitem, roomNumber);
         count1++;
         break;
       }
