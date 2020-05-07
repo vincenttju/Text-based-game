@@ -66,6 +66,7 @@ void take_command(int y, int x, string * &invertory, string itemTaken, int &item
       invertory[itemsCarried] = itemTaken;
       itemsCarried += 1;
       cout << itemTaken << " is taken into the inventory" << endl;
+      cout << "Maybe try to examine it?" << endl;
     }
   }
 
@@ -114,7 +115,7 @@ void grow_inventory(string * &invertory, int &inventorySize, int n){
   delete [] invertory;
   invertory = new_inventory;
   inventorySize += n;
-  cout << "Inventory size increased" << endl; // cout hanya buat test bisa work atau kagak
+  cout << "Inventory size increased" << endl; 
 }
 
 bool check_inventory(string itemTaken, string * invertory, int itemsCarried){
