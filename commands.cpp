@@ -140,7 +140,12 @@ void item_function(string item, int roomNumber){
 }
 
 void item_usage(string item, int room){
+  string usedItems[10];
+  int count = 0;
+  
   if ((item == "key") && (room == 6)){
+    usedItems[count] = "key";
+    count++;
     cout << "gate is unlocked" << endl;
   }
   
@@ -149,13 +154,19 @@ void item_usage(string item, int room){
   }
   
   else if ((item == "torch") && (room == 6)){
-    cout << "You have just burned the vine." << endl;
-    cout << "Now the path is clear. " << endl;
+    if (usedItems[0] == "key"){
+      usedItems[count] = "torch";
+      count++;
+      cout << "You have just burned the vine." << endl;
+      cout << "Now the path is clear. " << endl;
+    }
+    else
+      cout << "Use the key to open the gate first!" << endl;
   }
   
   else if ((item == "torch") && (room != 6)){
-    cout << "You have just burned the entire room." << endl;
-    cout << "You need to get out otherwise you are dead." << endl;
+    cout << "You will burn the entire room if you use it here." << endl;
+    cout << "Try it in another room." << endl;
   }
   
   else if (item == "flashlight"){
@@ -236,9 +247,6 @@ void use_command(int y, int x, string itemUsed, string * &inventory, int invento
 
 }
 
-void answer_command(){
-
-}
 
 void grow_inventory(string * &inventory, int &inventorySize, int n){
   string * new_inventory = new string [inventorySize + n];
