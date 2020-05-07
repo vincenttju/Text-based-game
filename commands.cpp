@@ -66,7 +66,7 @@ void take_command(int y, int x, string * &inventory, string itemTaken, int &item
       inventory[itemsCarried] = itemTaken;
       itemsCarried += 1;
       cout << itemTaken << " is taken into the inventory" << endl;
-      cout << "Maybe try to examine it?" << endl;
+      cout << "Maybe try to examine or use it?" << endl;
     }
   }
 
@@ -80,7 +80,7 @@ void item_function(string item, int roomNumber){
   if ((item == "drawer") && (roomNumber == 3)){
     cout << "There is a notepad and a gun inside a drawer." << endl;
     cout << "You can take these items if you haven't." << endl;
-    cout << "Maybe try to examine it?" << endl;
+    cout << "Maybe try to examine or use it?" << endl;
     cout << "There is \"T\" character written inside the drawer." << endl;
   }
   
