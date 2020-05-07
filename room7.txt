@@ -1,5 +1,5 @@
 Now, you are in a balcony.
 In front of you, there is only darkness you can see and silence you can hear.
-However, there is a rope lying on the floor.
+However, there is a rope lying on the floor, and you can see "R" character beside it.
 You can take these items if you haven't.
 You can go north or east
