@@ -107,7 +107,7 @@ bool check_inventory(string itemTaken, string * invertory, int itemsCarried){
   else{
     for (int i = 0; i < itemsCarried; i++){
       if (invertory[i] == itemTaken){
-        cout << "Item has been collected into the inventory" << endl;
+        cout << "You already took the item" << endl;
         return 0;
       }
     }

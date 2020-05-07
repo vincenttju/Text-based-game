@@ -6,6 +6,7 @@
 #include "struct.h"
 #include "commands.h"
 #include "commandCheck.h"
+#include "generateRoom.h"
 using namespace std;
 
 
@@ -28,6 +29,7 @@ void mainMenu(){
   cout << "   Find several pieces of clues to get out of here    " << endl;
   cout << "   Be careful of him, human flesh is his favourite    " << endl;
   cout << "------------------------------------------------------" << endl;
+  cout << "There is a door in your north side" << endl;
   cout << "You can go north" << endl;
   cout <<  "------> Please input your command : " << endl;
   getline(cin, firstInput);
@@ -131,7 +133,7 @@ int main(){
   string * invertory = new string [inventorySize];
 
   mainMenu();
-
+  generateRoom(Yposition, Xposition);
   while (doCommand(Yposition, Xposition, invertory, itemsCarried, inventorySize, love));
 
   delete []invertory;

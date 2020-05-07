@@ -8,10 +8,10 @@ commands.o: commands.cpp commands.h generateRoom.h struct.h
 
 commandCheck.o: commandCheck.cpp commandCheck.h
 	g++ $(FLAGS) -c $<
-	
-main.o: main.cpp commands.h commandCheck.h struct.h
+
+main.o: main.cpp commands.h commandCheck.h struct.h generateRoom.h
 	g++ $(FLAGS) -c $<
-	
+
 main: generateRoom.o commands.o main.o commandCheck.o
 	g++ $(FLAGS) $^ -o $@
 
