@@ -180,6 +180,9 @@ void item_usage(string item, int room){
   else if ((item == "pan") && (room != 4)){
     cout << "You cannot use it here" << endl;
   }
+  
+  else{
+    cout << "The item cannot be used!" << endl;
 }
 
 void examine_command(int y, int x, string itemExamined, string * &inventory, int inventorySize){
