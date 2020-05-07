@@ -66,8 +66,8 @@ bool doCommand(int &y, int &x, string * &inventory, int &itemsCarried, int &inve
   else if (commands[0] == "examine")
     examine_command(y, x, commands[1], inventory, inventorySize);
 
-  //else if (commands[0] == "use")
-  //  use_command();
+  else if (commands[0] == "use")
+    use_command(y, x, commands[1], inventory, inventorySize);
 
   //else if (commands[0] == "answer")
   //  answer_command();
