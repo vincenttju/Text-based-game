@@ -102,12 +102,12 @@ void item_function(string item, int roomNumber){
   else if (item == "notepad"){
     cout << "___________________________________________________________" << endl;
     cout << endl;
-    cout << " 1. I TURN ONCE, WHAT IS OUT WILL NOT GET IN, " << endl;
+    cout << "    I TURN ONCE, WHAT IS OUT WILL NOT GET IN, " << endl;
     cout << "    I TURN AGAIN, WHAT IS IN WILL NOT GET OUT. " << endl;
     cout << endl;
-    cout << " 2. I CAN FILL AN ENTIRE ROOM WITHOUT TAKING UP ANY SPACE. " << endl;
+    cout << "    I CAN FILL AN ENTIRE ROOM WITHOUT TAKING UP ANY SPACE. " << endl;
     cout << endl;
-    cout << " 3. THE MORE OF THIS THERE IS, THE LESS YOU SEE." << endl;
+    cout << "    THE MORE OF THIS THERE IS, THE LESS YOU SEE." << endl;
     cout << " \"N\" IS MY FAVOURITE CHARACTER!" << endl;
     cout << "___________________________________________________________" << endl;
   }
@@ -138,8 +138,13 @@ void item_function(string item, int roomNumber){
   else if (item == "bullet"){
     cout << " It is a sillicon bullet!" << endl;
     cout << " This item is very useful, dont waste it!" << endl;
+    cout << " Use this to load the gun!" << endl;
   }
-
+  
+  else if (item == "gun"){    
+    cout << "Use this to kill it!" << endl;
+  }
+  
   else
     cout << "This item cannot be examined" << endl;
 }
@@ -198,8 +203,23 @@ void item_usage(string item, int room, bool lastMission){
     cout << "You cannot use it here" << endl;
   }
   
-  else if ((item == "rope") && (room != 6)){
+  else if (item == "rope"){
     cout << "You cannot use it here" << endl;
+  }
+  
+  else if (item == "phone"){
+    cout << "You cannot use it here" << endl;
+    cout << "No signal inside this mansion." << endl;
+  }
+  
+  else if (item == "bullet"){
+    cout << "It is a sillicon bullet!" << endl;
+    cout << "This item is very useful, dont waste it!" << endl;
+    cout << "Use this to load the gun!" << endl;
+  }
+  
+  else if (item == "gun"){    
+    cout << "Use this to kill it!" << endl;
   }
   
   else if (item == "lock"){
