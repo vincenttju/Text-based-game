@@ -76,16 +76,21 @@ void take_command(int y, int x, string * &inventory, string itemTaken, int &item
 }
   
 void item_function(string item){
-  if (item == "letter"){
+  if (item == "drawer"){
+    cout << "There is a notepad and a gun inside a drawer." << endl;
+    cout << "You can take these items if you haven't." << endl;
+    cout << "Maybe try to examine it?" << endl;
+    cour << "There is \"T\" character written inside the drawer." << endl;
+
+  }
+  else if (item == "letter"){
     cout << "________________________________________________" << endl;
     cout << endl;
     cout << " If you find this message, keep it in mind      " << endl;
     cout << " IT IS ALWAYS WATCHING YOU! The bloody creature " << endl;
     cout << " will kill you in the blink of an eye. " << endl;
-    cout << " If it shows up, use a flash light or torch     " << endl;
-    cout << " Enlightment is its weakness  " << endl;
-    cout << " Find also gun and the bullet, it wont kill him " << endl;
-    cout << " but it wil slow him down " << endl;
+    cout << " Find  gun and the bullet, it will kill him " << endl;
+    cout << "Your next character is \"U\" " << endl;
     cout << "________________________________________________" << endl;
   }
   
@@ -98,6 +103,7 @@ void item_function(string item){
     cout << " 2. I CAN FILL AN ENTIRE ROOM WITHOUT TAKING UP ANY SPACE. " << endl;
     cout << endl;
     cout << " 3. THE MORE OF THIS THERE IS, THE LESS YOU SEE." << endl;
+    cout << " \"N\" IS MY FAVOURITE CHARACTER!" << endl;
     cout << "___________________________________________________________" << endl;
   }
   
@@ -107,6 +113,7 @@ void item_function(string item){
     cout << " You can't open the gate without me! " << endl;
     cout << " I follow you all the time and I know your every move, " << endl;
     cout << " but you can’t never touch me or catch me." << endl;
+    cout << " \"V\" is one of the character you will need " << endl;
     cout << "_______________________________________________________" << endl;
   }
   
@@ -114,6 +121,7 @@ void item_function(string item){
     cout << " It is a family black and white photograph " << endl;
     cout << " In the photo you can see a mysterious guy " << endl;
     cout << " with a big and gloomy feature " << endl;
+    cout << " There is a huge \"A\" character in the background of the picture " << endl;
   }
   
 }
