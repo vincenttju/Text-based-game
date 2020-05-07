@@ -8,16 +8,7 @@
 #include "commandCheck.h"
 using namespace std;
 
-void grow_inventory(string * &invertory, int &inventorySize, int n){
-  string * new_inventory = new string [inventorySize + n];
-  for (int i = 0; i < inventorySize; i++){
-    new_inventory[i] = invertory[i];
-  }
-  delete [] invertory;
-  invertory = new_inventory;
-  inventorySize += n;
-  cout << "Inventory size increased" << endl; // cout hanya buat test bisa work atau kagak
-}
+
 void mainMenu(){
   string name, firstInput;
   cout << "************ Welcome to One Night Game ************" << endl;
@@ -79,7 +70,7 @@ void command(int &count, string commands[]){
 
 }
 
-bool doCommand(int &y, int &x, string invertory[], int &itemsCarried, struct listItems love[]){
+bool doCommand(int &y, int &x, string * &invertory, int &itemsCarried, int &inventorySize, struct listItems love[]){
   string commands[2];
   int count = 0;
 
@@ -95,7 +86,7 @@ bool doCommand(int &y, int &x, string invertory[], int &itemsCarried, struct lis
     go_command(y, x, commands[1]);
 
   else if (commands[0] == "take")
-    take_command(y, x, invertory, commands[1], itemsCarried, love);
+    take_command(y, x, invertory, commands[1], itemsCarried, inventorySize, love);
 
   //else if (commands[0] == "examine")
   //  examine_command();
@@ -136,12 +127,12 @@ int main(){
     }
   }
 
-  int itemsCarried=0;
-  string * invertory = new string [itemsCarried+1];
+  int itemsCarried=0, inventorySize = 3;
+  string * invertory = new string [inventorySize];
 
   mainMenu();
 
-  while (doCommand(Yposition, Xposition, invertory, itemsCarried, love));
+  while (doCommand(Yposition, Xposition, invertory, itemsCarried, inventorySize, love));
 
   delete []invertory;
   return 0;
