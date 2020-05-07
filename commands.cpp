@@ -75,14 +75,36 @@ void take_command(int y, int x, string * &inventory, string itemTaken, int &item
   }
 }
 
-void examine_command(){
-
+void examine_command(int y, int x, string itemExamined, string * &inventory, int inventorySize){
+  int count1=0;
+  int roomNumber = ((x+1)+(y*3));
+  string Xitem;
+  if (inventorySize == 0){
+        cout << "invalid command" << endl;
+        cout << "You don't have this item in the inventory" << endl;
+  }
+  else{
+    for (int i=0; i<inventorySize; i++){
+      if (itemExamined == inventory[i]){
+        Xitem = itemExamined;
+        count1+=1;
+      }
+    }
+  }
+  
+  if (count1 == 0){
+    cout << "invalid command" << endl;
+    cout << "You don't have this item in the inventory" << endl;
+  }
+  else{
+    //item_function(item);
+  }
 }
 
 void use_command(int y, int x, string itemUsed, string * &inventory, int inventorySize){
   int roomNumber = ((x+1)+(y*3));
-
-  string item;
+  int count1 = 0;
+  string Uitem;
 
   if (inventorySize == 0){
         cout << "invalid command" << endl;
@@ -91,11 +113,20 @@ void use_command(int y, int x, string itemUsed, string * &inventory, int invento
   else{
     for (int i=0; i<inventorySize; i++){
       if (itemUsed == inventory[i]){
-        item = itemUsed;
+        Uitem = itemUsed;
+        count1 +=1;
       }
     }
   }
-  //item_function(item);
+  
+  if (count1 == 0){
+    cout << "invalid command" << endl;
+    cout << "You don't have this item in the inventory" << endl;
+  }
+  else{
+    //item_function(item);
+  }
+
 }
 
 void answer_command(){
