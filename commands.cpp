@@ -148,7 +148,6 @@ void view_invertory_command(string * &invertory, int inventorySize, string itemV
     }
   }
   else{
-    cout << "Invalid input!";
-    cout << endl;
+    cout << "Invalid input!" << endl;
   }
 }
