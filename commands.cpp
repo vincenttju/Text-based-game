@@ -134,9 +134,9 @@ void item_function(string item){
     cout << "This item cannot be examined" << endl;
 }
 
-void examine_command(int y, int x, string itemExamined, string * &inventory, int inventorySize){
+void examine_command(string itemExamined, string * &inventory, int inventorySize){
   int count1=0;
-  int roomNumber = ((x+1)+(y*3));
+  
   string Xitem;
   if (inventorySize == 0){
         cout << "invalid command" << endl;
