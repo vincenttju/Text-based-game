@@ -123,6 +123,8 @@ void item_function(string item){
     cout << " with a big and gloomy feature " << endl;
     cout << " There is a huge \"A\" character in the background of the picture " << endl;
   }
+  else
+    cout << "This item cannot be examined" << endl;
   
 }
 
@@ -148,7 +150,7 @@ void examine_command(int y, int x, string itemExamined, string * &inventory, int
     cout << "You don't have this item in the inventory" << endl;
   }
   else{
-    //item_function(Xitem);
+    item_function(Xitem);
   }
 }
 
