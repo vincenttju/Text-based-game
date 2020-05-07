@@ -132,13 +132,6 @@ void item_function(string item){
   
   else{
     cout << "This item cannot be examined" << endl;
-<<<<<<< HEAD
-
-=======
-  }
-  
->>>>>>> 3517638f2b33a05ac1e121176cfbdb93614a261c
-}
 
 void examine_command(int y, int x, string itemExamined, string * &inventory, int inventorySize){
   int count1=0;
@@ -150,9 +143,11 @@ void examine_command(int y, int x, string itemExamined, string * &inventory, int
   }
   else{
     for (int i=0; i<inventorySize; i++){
-      if (itemExamined == inventory[i]){
+      if (itemExamined == inventory[i] || itemExamined == "drawer"){
         Xitem = itemExamined;
-        count1+=1;
+        item_function(itemExamined);
+        count1++;
+        break;
       }
     }
   }
@@ -160,9 +155,6 @@ void examine_command(int y, int x, string itemExamined, string * &inventory, int
   if (count1 == 0){
     cout << "invalid command" << endl;
     cout << "You don't have this item in the inventory" << endl;
-  }
-  else{
-    item_function(Xitem);
   }
 }
 
