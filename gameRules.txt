@@ -1,6 +1,6 @@
 ====================================================
 GAME RULES :
-- You can input several commmands suh as :
+- You can input several commmands such as :
     --> go north
     --> take letter
     --> examine letter
