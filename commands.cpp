@@ -74,13 +74,13 @@ void take_command(int y, int x, string * &inventory, string itemTaken, int &item
     cout << "invalid items!" << endl;
   }
 }
-  
+
 void item_function(string item){
   if (item == "drawer"){
     cout << "There is a notepad and a gun inside a drawer." << endl;
     cout << "You can take these items if you haven't." << endl;
     cout << "Maybe try to examine it?" << endl;
-    cour << "There is \"T\" character written inside the drawer." << endl;
+    cout << "There is \"T\" character written inside the drawer." << endl;
 
   }
   else if (item == "letter"){
@@ -93,7 +93,7 @@ void item_function(string item){
     cout << "Your next character is \"U\" " << endl;
     cout << "________________________________________________" << endl;
   }
-  
+
   else if (item == "notepad"){
     cout << "___________________________________________________________" << endl;
     cout << endl;
@@ -106,7 +106,7 @@ void item_function(string item){
     cout << " \"N\" IS MY FAVOURITE CHARACTER!" << endl;
     cout << "___________________________________________________________" << endl;
   }
-  
+
   else if (item == "mail"){
     cout << "_______________________________________________________" << endl;
     cout << endl;
@@ -116,7 +116,7 @@ void item_function(string item){
     cout << " \"V\" is one of the character you will need " << endl;
     cout << "_______________________________________________________" << endl;
   }
-  
+
   else if (item == "picture"){
     cout << " It is a family black and white photograph " << endl;
     cout << " In the photo you can see a mysterious guy " << endl;
@@ -125,7 +125,7 @@ void item_function(string item){
   }
   else
     cout << "This item cannot be examined" << endl;
-  
+
 }
 
 void examine_command(int y, int x, string itemExamined, string * &inventory, int inventorySize){
@@ -144,7 +144,7 @@ void examine_command(int y, int x, string itemExamined, string * &inventory, int
       }
     }
   }
-  
+
   if (count1 == 0){
     cout << "invalid command" << endl;
     cout << "You don't have this item in the inventory" << endl;
@@ -171,7 +171,7 @@ void use_command(int y, int x, string itemUsed, string * &inventory, int invento
       }
     }
   }
-  
+
   if (count1 == 0){
     cout << "invalid command" << endl;
     cout << "You don't have this item in the inventory" << endl;
