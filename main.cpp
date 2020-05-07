@@ -105,8 +105,7 @@ bool doCommand(int &y, int &x, string * &invertory, int &itemsCarried, int &inve
   return true;
 }
 
-int main(){
-
+void game(int Yposition, int Xposition){
   listItems love[9];
   love[0] = { 1, "key", "flashlight" };
   love[1] = { 2, "picture" , "phone" };
@@ -118,6 +117,13 @@ int main(){
   love[7] = { 8, "battery", "key" };
   love[8] = { 9, "torch", "mail" };
 
+  int itemsCarried=0, inventorySize = 3;
+  string * invertory = new string [inventorySize];
+  while (doCommand(Yposition, Xposition, invertory, itemsCarried, inventorySize, love));
+
+  delete []invertory;
+}
+int main(){
   srand(time(NULL));
   int Yposition = rand() % 3;
   int Xposition = rand() % 3;
@@ -128,14 +134,8 @@ int main(){
       map[y][x] = value;
     }
   }
-
-  int itemsCarried=0, inventorySize = 3;
-  string * invertory = new string [inventorySize];
-
   mainMenu();
   generateRoom(Yposition, Xposition);
-  while (doCommand(Yposition, Xposition, invertory, itemsCarried, inventorySize, love));
-
-  delete []invertory;
+  game(Yposition, Xposition);
   return 0;
 }
