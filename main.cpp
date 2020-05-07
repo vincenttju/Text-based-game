@@ -11,7 +11,7 @@ using namespace std;
 void grow_inventory(string * &invertory, int &inventorySize, int n){
   string * new_inventory = new string [inventorySize + n];
   for (int i = 0; i < inventorySize; i++){
-    new_inventory[i] = invertory[i]
+    new_inventory[i] = invertory[i];
   }
   delete [] invertory;
   invertory = new_inventory;
@@ -87,10 +87,10 @@ bool doCommand(int &y, int &x, string invertory[], int &itemsCarried, struct lis
     count = 0;
     command(count, commands);
   }
-  
+
   if (commands[0] == "quit")
     return 0;
-  
+
   else if (commands[0] == "go")
     go_command(y, x, commands[1]);
 
@@ -108,7 +108,7 @@ bool doCommand(int &y, int &x, string invertory[], int &itemsCarried, struct lis
 
   //else if (commands[0] == "answer")
   //  answer_command();
-  
+
   return true;
 }
 
@@ -135,14 +135,14 @@ int main(){
       map[y][x] = value;
     }
   }
-  
+
   int itemsCarried=0;
   string * invertory = new string [itemsCarried+1];
-  
+
   mainMenu();
 
   while (doCommand(Yposition, Xposition, invertory, itemsCarried, love));
-  
+
   delete []invertory;
   return 0;
 }

@@ -7,7 +7,7 @@ using namespace std;
 
 void go_command(int &y, int &x, string userInput){
   int roomNumber = ((x+1)+(y*3));
-  
+
   if (userInput == "north"){
     if (roomNumber == 1 || roomNumber == 2 || roomNumber == 3){
       cout << "----- You cannot go there -----" << endl;
@@ -52,11 +52,11 @@ void go_command(int &y, int &x, string userInput){
 
 void take_command(int y, int x, string invertory[], string itemTaken, int &itemsCarried, struct listItems love[]){
   int roomNumber = ((x)+(y*3));
-  
+
   if ((itemTaken == love[roomNumber].item1) || (itemTaken == love[roomNumber].item2)){
     invertory[itemsCarried] += itemTaken;
     itemsCarried += 1;
-    cout << itemTaken" << " is taken into the inventory" << endl;
+    cout << itemTaken << " is taken into the inventory" << endl;
   }
   else{
     cout << "invalid items!" << endl;
