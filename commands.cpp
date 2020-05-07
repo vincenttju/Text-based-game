@@ -62,7 +62,11 @@ void take_command(int y, int x, string * &inventory, string itemTaken, int &item
   }
 
   if ((itemTaken == love[roomNumber].item1) || (itemTaken == love[roomNumber].item2)){
+<<<<<<< HEAD
     if (check_inventory(itemTaken, inventory, itemsCarried)){
+=======
+    if (check_inventory(itemTaken, invertory, itemsCarried)){
+>>>>>>> 29c320bea1c7f2044160b0d5c21a9372167c9315
       inventory[itemsCarried] = itemTaken;
       itemsCarried += 1;
       cout << itemTaken << " is taken into the inventory" << endl;
@@ -110,7 +114,11 @@ void grow_inventory(string * &inventory, int &inventorySize, int n){
   delete [] inventory;
   inventory = new_inventory;
   inventorySize += n;
+<<<<<<< HEAD
   cout << "Inventory size increased" << endl;
+=======
+  cout << "Inventory size increased" << endl; 
+>>>>>>> 29c320bea1c7f2044160b0d5c21a9372167c9315
 }
 
 bool check_inventory(string itemTaken, string * inventory, int itemsCarried){

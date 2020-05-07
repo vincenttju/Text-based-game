@@ -4,9 +4,9 @@
 using namespace std;
 
 bool nounCheck(string commands[]){
-  string nounList[19] = {"north", "south", "east", "west","key", "rope", "torch", "phone", "gun", "flashlight", "picture", "letter", "pan", "fruits", "bullet", "battery", "mail", "game", "invertory"};
+  string nounList[19] = {"north", "south", "east", "west","key", "rope", "torch", "phone", "gun", "flashlight", "picture", "letter", "pan", "fruits", "bullet", "battery", "mail", "game", "inventory"};
   int nounFound = 0;
-  for (int i = 0; i < 18; i++){
+  for (int i = 0; i < 19; i++){
     if (commands[1] == nounList[i])
     {
       nounFound++;
@@ -15,9 +15,9 @@ bool nounCheck(string commands[]){
   }
 
   if (nounFound == 0){
-    cout << "\n--------------- Invalid Noun --------------" << endl;
-    cout <<   "------------- Some Valid Noun: -----------" << endl;
-    cout <<   "--- game, key, rope, torch, phone, gun  --" << endl;
+    cout << "\n--------------- Invalid Noun ---------------" << endl;
+    cout <<   "------------- Some Valid Noun: ------------" << endl;
+    cout <<   "-game, key, rope, south, west, north, east-" << endl;
     return true;
   }
   return 0;
