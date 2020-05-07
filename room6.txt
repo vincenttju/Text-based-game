@@ -1,4 +1,5 @@
 Now, you are in the ancient gate. This is the exit!
-However, the gate is locked.
+However, the gate is locked and blocked by climbing vine trees.
 You must find a way to open it.
+You may need to burn the climbing vine and find some key to open the gate.
 You can go north, south, or west
