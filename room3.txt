@@ -1,6 +1,4 @@
 You are in a dark and broken bedroom with a giant mirror.
 In the mirror, there is a message written in blood saying "HELP ME".
-There is a notepad and a gun inside a drawer.
-There is "T" character written inside the drawer.
-You can take these items if you haven't.
+There is a drawer in front of you, maybe try to examine it?
 You can go south or west
