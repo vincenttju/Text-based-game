@@ -115,14 +115,16 @@ bool check_inventory(string itemTaken, string * invertory, int itemsCarried){
   return true;
 }
 
-void view_invertory_command(string * &invertory, int inventorySize){ //buat liat invertory
-  if (inventorySize == 0){
-    cout << "empty!" << endl;
-  }
-  else{
-    for (int i=0; i<inventorySize; i++){
-      cout << invertory[i] << " ";
+void view_invertory_command(string * &invertory, int inventorySize, string itemViewed){
+  if (itemViewed == "invertory"){
+    if (inventorySize == 0){
+      cout << "empty!" << endl;
     }
-    cout << endl;
+    else{
+      for (int i=0; i<inventorySize; i++){
+        cout << invertory[i] << " ";
+      }
+      cout << endl;
+    }
   }
 }
