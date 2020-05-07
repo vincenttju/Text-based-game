@@ -113,7 +113,6 @@ int main(){
 
   wow.close();
   
-  cout << endl;
   cout << "Do you want to start the game? (yes/no)" << endl;
   string startORnot;
   getline(cin, startORnot);
@@ -123,14 +122,17 @@ int main(){
     generateRoom(Yposition, Xposition);
     game(Yposition, Xposition);
   }
+  
   else if (startORnot == "no"){
     cout << "Bye-bye, " << name << endl;
     cout << "See you at another time!" << endl;
+    cout << endl;
   }
   
   else{
     cout << "Invalid answer! You have to input (yes) to continue" << endl;
     cout << "Bye-bye, " << name << "!" << endl;
+    cout << endl;
   }
   
   return 0;
