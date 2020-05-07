@@ -37,7 +37,7 @@ bool commandCheck(string commands[]){
 }
 
 bool commandCheck2(string commands[]){
-  string commandsList[7] = {"go", "take", "examine", "open", "use", "answer", "quit"};
+  string commandsList[7] = {"go", "take", "examine","view", "use", "answer", "quit"};
   int commandFound = 0;
   for ( int i = 0; i < 7; i++){
     if (commands[0] == commandsList[i])
@@ -50,7 +50,7 @@ bool commandCheck2(string commands[]){
   if (commandFound == 0){
     cout << "\n------------- Invalid Command -------------" << endl;
     cout <<   "-------------  Valid commands: ------------" << endl;
-    cout <<   " go, take, examine, open, use, answer, quit" << endl;
+    cout <<   " go, take, examine, view, use, answer, quit" << endl;
     return true;
   }
   return 0;

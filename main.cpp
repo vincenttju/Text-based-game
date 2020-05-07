@@ -61,11 +61,7 @@ bool doCommand(int &y, int &x, string * &inventory, int &itemsCarried, int &inve
 
   else if (commands[0] == "view")
     view_inventory_command(inventory, inventorySize, commands[1]);
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 29c320bea1c7f2044160b0d5c21a9372167c9315
   //else if (commands[0] == "examine")
   //  examine_command();
 
