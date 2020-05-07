@@ -104,6 +104,14 @@ int main(){
   getline(cin, name);
   cout << "Hello " << name << ", good luck and have fun" << endl;
   
+  string gameRules;
+  fin.open("gameRules.txt");
+  while (getline(fin, gameRules)){    
+    cout << gameRules << endl;
+  }
+
+  fin.close();
+  
   mainMenu();
   generateRoom(Yposition, Xposition);
   game(Yposition, Xposition);
