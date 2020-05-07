@@ -75,14 +75,19 @@ void take_command(int y, int x, string * &inventory, string itemTaken, int &item
   }
 }
 
-void item_function(string item){
-  if (item == "drawer"){
+void item_function(string item, int y, int x){
+  int roomNumber = ((x+1)+(y*3));
+  if ((item == "drawer") && (roomNumber == 3)){
     cout << "There is a notepad and a gun inside a drawer." << endl;
     cout << "You can take these items if you haven't." << endl;
     cout << "Maybe try to examine it?" << endl;
     cout << "There is \"T\" character written inside the drawer." << endl;
-
   }
+  
+  else if ((item == "drawer") && (roomNumber != 3)){
+    cout << " There is no drawer here! " << endl;
+  }
+  
   else if (item == "letter"){
     cout << "________________________________________________" << endl;
     cout << endl;
