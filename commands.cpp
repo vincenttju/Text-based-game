@@ -167,6 +167,19 @@ void item_usage(string item, int room){
     cout << "The battery is dead." << endl;
   }
   
+  else if (item == "knife"){
+    cout << "The knife has been possessed!" << endl;
+    cout << "You have just lost your left arm!" << endl;
+  }
+  
+  else if ((item == "pan") && (room == 4)){
+    cout << "You cannot use the pan" << endl;
+    cout << "You dont know how to cook!" << endl;
+  }
+  
+  else if ((item == "pan") && (room != 4)){
+    cout << "You cannot use it here" << endl;
+  }
 }
 
 void examine_command(int y, int x, string itemExamined, string * &inventory, int inventorySize){
