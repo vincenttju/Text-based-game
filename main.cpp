@@ -107,7 +107,7 @@ int main(){
   string gameRules;
   ifstream wow;
   wow.open("gameRules.txt");
-  while (getline(fin, gameRules)){    
+  while (getline(wow, gameRules)){    
     cout << gameRules << endl;
   }
 
