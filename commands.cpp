@@ -123,8 +123,16 @@ void item_function(string item){
     cout << " with a big and gloomy feature " << endl;
     cout << " There is a huge \"A\" character in the background of the picture " << endl;
   }
-  else
+  
+  else if (item == "fruits"){
+    cout << " You have a bunch of rotten fruits " << endl;
+    cout << " banana, apple, mango, and orange  " << endl;
+    cout << " You cannot eat these garbage! " << endl;
+  }
+  
+  else{
     cout << "This item cannot be examined" << endl;
+  }
   
 }
 
