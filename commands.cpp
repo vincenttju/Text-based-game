@@ -209,6 +209,7 @@ void item_usage(string item, int room, bool lastMission){
   
   else{
     cout << "The item cannot be used!" << endl;
+  }
 }
 
 void examine_command(int y, int x, string itemExamined, string * &inventory, int inventorySize){
