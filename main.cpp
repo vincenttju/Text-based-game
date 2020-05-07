@@ -105,12 +105,13 @@ int main(){
   cout << "Hello " << name << ", good luck and have fun" << endl;
   
   string gameRules;
-  fin.open("gameRules.txt");
+  ifstream wow;
+  wow.open("gameRules.txt");
   while (getline(fin, gameRules)){    
     cout << gameRules << endl;
   }
 
-  fin.close();
+  wow.close();
   
   mainMenu();
   generateRoom(Yposition, Xposition);
