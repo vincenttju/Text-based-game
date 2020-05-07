@@ -121,7 +121,7 @@ bool doCommand(int &y, int &x, string * &inventory, int &itemsCarried, int &inve
     examine_command(y, x, commands[1], inventory, inventorySize);
 
   else if (commands[0] == "use")
-    use_command(y, x, commands[1], inventory, inventorySize);
+    use_command(y, x, commands[1], inventory, inventorySize, lastMission);
 
   //else if (commands[0] == "answer")
   //  answer_command();
