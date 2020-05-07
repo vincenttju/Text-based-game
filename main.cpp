@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <sstream>
+#include <fstream>
 #include <string>
 #include <cctype>
 #include "struct.h"
@@ -96,13 +97,13 @@ int main(){
   srand(time(NULL));
   int Yposition = rand() % 3;
   int Xposition = rand() % 3;
-  int map[3][3];
-  for (int y=0; y<3; y++){
-    for (int x=0; x<3; x++){
-      int value = ((x+1)+(y*3));
-      map[y][x] = value;
-    }
-  }
+  
+  string name;
+  cout << "************ Welcome to One Night Game ************" << endl;
+  cout << "Hello, please enter your name :" << endl;
+  getline(cin, name);
+  cout << "Hello " << name << ", good luck and have fun" << endl;
+  
   mainMenu();
   generateRoom(Yposition, Xposition);
   game(Yposition, Xposition);
