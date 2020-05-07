@@ -90,6 +90,9 @@ bool doCommand(int &y, int &x, string * &invertory, int &itemsCarried, int &inve
   else if (commands[0] == "take")
     take_command(y, x, invertory, commands[1], itemsCarried, inventorySize, love);
 
+  else if (commands[0] == "view")
+    view_invertory_command(invertory, inventorySize, commands[1]);
+  
   //else if (commands[0] == "examine")
   //  examine_command();
 
