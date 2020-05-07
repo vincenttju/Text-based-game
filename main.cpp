@@ -117,10 +117,6 @@ int main(){
   cout << "Do you want to start the game? (yes/no)" << endl;
   string startORnot;
   getline(cin, startORnot);
-  while ((startORnot != "yes") || (startORnot != "no")){
-    cout << "Invalid answer, please input (yes) or (no)" << endl;
-    getline(cin, startORnot);
-  }
   
   if (startORnot == "yes"){
     mainMenu();
@@ -130,6 +126,11 @@ int main(){
   else if (startORnot == "no"){
     cout << "Bye-bye, " << name << endl;
     cout << "See you at another time!" << endl;
+  }
+  
+  else{
+    cout << "Invalid answer! You have to input (yes) to continue" << endl;
+    cout << "Bye-bye, " << name << "!" << endl;
   }
   
   return 0;
