@@ -82,7 +82,7 @@ void open_command(){
 
 }
 
-void use_command(int y, int x, string itemUsed, string invertory[], int inventorySize){
+void use_command(int y, int x, string itemUsed, string * &invertory, int inventorySize){
   int roomNumber = ((x+1)+(y*3));
   
   string item;
