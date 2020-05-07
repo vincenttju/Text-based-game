@@ -168,7 +168,6 @@ void use_command(int y, int x, string itemUsed, string * &inventory, int invento
   int roomNumber = ((x+1)+(y*3));
   int count1 = 0;
   string Uitem;
-
   if (inventorySize == 0){
         cout << "invalid command" << endl;
         cout << "You don't have this item in the inventory" << endl;
@@ -177,7 +176,9 @@ void use_command(int y, int x, string itemUsed, string * &inventory, int invento
     for (int i=0; i<inventorySize; i++){
       if (itemUsed == inventory[i]){
         Uitem = itemUsed;
-        count1 +=1;
+        item_function(Uitem, roomNumber);
+        count1++;
+        break;
       }
     }
   }
@@ -186,9 +187,7 @@ void use_command(int y, int x, string itemUsed, string * &inventory, int invento
     cout << "invalid command" << endl;
     cout << "You don't have this item in the inventory" << endl;
   }
-  else{
-    //item_function(Uitem);
-  }
+
 }
 
 void answer_command(){
