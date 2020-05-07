@@ -97,7 +97,7 @@ void examine_command(int y, int x, string itemExamined, string * &inventory, int
     cout << "You don't have this item in the inventory" << endl;
   }
   else{
-    //item_function(item);
+    //item_function(Xitem);
   }
 }
 
@@ -124,9 +124,8 @@ void use_command(int y, int x, string itemUsed, string * &inventory, int invento
     cout << "You don't have this item in the inventory" << endl;
   }
   else{
-    //item_function(item);
+    //item_function(Uitem);
   }
-
 }
 
 void answer_command(){
