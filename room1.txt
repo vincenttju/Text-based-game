@@ -1,5 +1,6 @@
 You are now in a rotten bedroom, the cold air chills your bone as you enter the room.
 In front of you, you can see mysterious blood splatters in almost every corner of the room.
+There is “E” character written on the ceiling of the room
 There is an unknown key and an old flashlight lying on the desk.
 You can take these items if you haven't.
 You can go south or east after that.
