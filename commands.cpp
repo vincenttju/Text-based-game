@@ -75,6 +75,20 @@ void take_command(int y, int x, string * &inventory, string itemTaken, int &item
   }
 }
   
+void item_function(string item){
+  if (item == "letter"){
+    cout << "________________________________________________" << endl;
+    cout << endl;
+    cout << " If you find this message, keep it in mind      " << endl;
+    cout << " IT IS ALWAYS WATCHING YOU! The bloody creature " << endl;
+    cout << " will kill you in the blink of an eye. " << endl;
+    cout << " If it shows up, use a flash light or torch     " << endl;
+    cout << " Enlightment is its weakness  " << endl;
+    cout << " Find also gun and the bullet, it wont kill him " << endl;
+    cout << " but it wil slow him down " << endl;
+    cout << "________________________________________________" << endl;
+  }
+}
 
 void examine_command(int y, int x, string itemExamined, string * &inventory, int inventorySize){
   int count1=0;
