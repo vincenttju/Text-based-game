@@ -112,12 +112,12 @@ void game(int Yposition, int Xposition){
   listItems love[9];
   love[0] = { 1, "key", "flashlight" };
   love[1] = { 2, "picture" , "phone" };
-  love[2] = { 3, "letter", "gun" };
+  love[2] = { 3, "notepad", "gun" };
   love[3] = { 4, "pan" , "fruits" };
   love[4] = { 5, "bullet", "letter" };
   love[5] = { 6, "0", "0" };
-  love[6] = { 7, "rope", "0" };
-  love[7] = { 8, "battery", "key" };
+  love[6] = { 7, "rope", "knife" };
+  love[7] = { 8, "battery", "lock" };
   love[8] = { 9, "torch", "mail" };
 
   int itemsCarried=0, inventorySize = 3;
