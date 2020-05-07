@@ -12,4 +12,6 @@ void examine_command(int y, int x, string itemExamined, string * &inventory, int
 
 void view_inventory_command(string * &inventory, int inventorySize, string itemViewed);
 
+void use_command(int y, int x, string itemUsed, string * &inventory, int inventorySize, bool lastMission);
+
 #endif
