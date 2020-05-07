@@ -193,6 +193,15 @@ void item_usage(string item, int room, bool lastMission){
     cout << "You cannot use it here" << endl;
   }
   
+  else if ((item == "rope") && (room != 6)){
+    cout << "You cannot use it here" << endl;
+  }
+  
+  else if (item == "lock"){
+    cout << "The lock is cursed!" << endl;
+    cout << "Suddenly, you feel extreme pain in your shoulder." << endl;
+  }
+  
   else{
     cout << "The item cannot be used!" << endl;
 }
