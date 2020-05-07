@@ -5,9 +5,9 @@
 #include "struct.h"
 using namespace std;
 
-void grow_inventory(string * &invertory, int &inventorySize, int n);
+void grow_inventory(string * &inventory, int &inventorySize, int n);
 
-bool check_inventory(string itemTaken, string * invertory, int itemsCarried);
+bool check_inventory(string itemTaken, string * inventory, int itemsCarried);
 
 void go_command(int &y, int &x, string userInput){
   int roomNumber = ((x+1)+(y*3));
@@ -54,18 +54,19 @@ void go_command(int &y, int &x, string userInput){
   }
 }
 
-void take_command(int y, int x, string * &invertory, string itemTaken, int &itemsCarried, int &inventorySize, listItems love[])
+void take_command(int y, int x, string * &inventory, string itemTaken, int &itemsCarried, int &inventorySize, listItems love[])
 {
   int roomNumber = ((x)+(y*3));
   if (itemsCarried >= inventorySize){
-    grow_inventory(invertory, inventorySize, 3);
+    grow_inventory(inventory, inventorySize, 3);
   }
 
   if ((itemTaken == love[roomNumber].item1) || (itemTaken == love[roomNumber].item2)){
-    if (check_inventory(itemTaken, invertory, itemsCarried)){
-      invertory[itemsCarried] = itemTaken;
+    if (check_inventory(itemTaken, inventory, itemsCarried)){
+      inventory[itemsCarried] = itemTaken;
       itemsCarried += 1;
       cout << itemTaken << " is taken into the inventory" << endl;
+      cout << "Maybe try to examine it?" << endl;
     }
   }
 
@@ -78,51 +79,46 @@ void examine_command(){
 
 }
 
-void use_command(int y, int x, string itemUsed, string * &invertory, int inventorySize){
+void use_command(int y, int x, string itemUsed, string * &inventory, int inventorySize){
   int roomNumber = ((x+1)+(y*3));
-  
+
   string item;
-  
+
   if (inventorySize == 0){
         cout << "invalid command" << endl;
-        cout << "You don't have this item in the invertory" << endl;
+        cout << "You don't have this item in the inventory" << endl;
   }
   else{
     for (int i=0; i<inventorySize; i++){
-      if (itemUsed == invertory[i]){
+      if (itemUsed == inventory[i]){
         item = itemUsed;
       }
     }
   }
-    
-  item_function(item);
-    
-}
-
-
+  //item_function(item);
 }
 
 void answer_command(){
 
 }
 
-void grow_inventory(string * &invertory, int &inventorySize, int n){
+void grow_inventory(string * &inventory, int &inventorySize, int n){
   string * new_inventory = new string [inventorySize + n];
   for (int i = 0; i < inventorySize; i++){
-    new_inventory[i] = invertory[i];
+    new_inventory[i] = inventory[i];
   }
-  delete [] invertory;
-  invertory = new_inventory;
+  delete [] inventory;
+  inventory = new_inventory;
   inventorySize += n;
-  cout << "Inventory size increased" << endl; // cout hanya buat test bisa work atau kagak
+  cout << "Inventory size increased" << endl;
 }
 
-bool check_inventory(string itemTaken, string * invertory, int itemsCarried){
+bool check_inventory(string itemTaken, string * inventory, int itemsCarried){
   if (itemsCarried == 0)
     return true;
   else{
     for (int i = 0; i < itemsCarried; i++){
-      if (invertory[i] == itemTaken){
+      if (inventory[i] == itemTaken){
         cout << "You already took the item" << endl;
         return 0;
       }
@@ -131,14 +127,14 @@ bool check_inventory(string itemTaken, string * invertory, int itemsCarried){
   return true;
 }
 
-void view_invertory_command(string * &invertory, int inventorySize, string itemViewed){
+void view_inventory_command(string * &inventory, int inventorySize, string itemViewed){
   if (itemViewed == "invertory"){
     if (inventorySize == 0){
       cout << "empty!" << endl;
     }
     else{
       for (int i=0; i<inventorySize; i++){
-        cout << invertory[i] << " ";
+        cout << inventory[i] << " ";
       }
       cout << endl;
     }
