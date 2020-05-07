@@ -132,7 +132,7 @@ bool check_inventory(string itemTaken, string * inventory, int itemsCarried){
   return true;
 }
 
-void view_invertory_command(string * &inventory, int inventorySize, string itemViewed){
+void view_inventory_command(string * &inventory, int inventorySize, string itemViewed){
   if (itemViewed == "invertory"){
     if (inventorySize == 0){
       cout << "empty!" << endl;
