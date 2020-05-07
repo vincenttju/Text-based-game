@@ -82,7 +82,27 @@ void open_command(){
 
 }
 
-void use_command(){
+void use_command(int y, int x, string itemUsed, string invertory[], int inventorySize){
+  int roomNumber = ((x+1)+(y*3));
+  
+  string item;
+  
+  if (inventorySize == 0){
+        cout << "invalid command" << endl;
+        cout << "You don't have this item in the invertory" << endl;
+  }
+  else{
+    for (int i=0; i<inventorySize; i++){
+      if (itemUsed == invertory[i]){
+        item = itemUsed;
+      }
+    }
+  }
+    
+  item_function(item);
+    
+}
+
 
 }
 
