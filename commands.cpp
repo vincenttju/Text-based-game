@@ -76,9 +76,7 @@ void take_command(int y, int x, string * &inventory, string itemTaken, int &item
 }
 
 void item_function(string item){
-  
-	if (item == "letter"){
-		cout << "________________________________________________" << endl;
+	if (item == "letter"){cout << "________________________________________________" << endl;
     cout << endl;
     cout << " If you find this message, keep it in mind      " << endl;
     cout << " IT IS ALWAYS WATCHING YOU! The bloody creature " << endl;
