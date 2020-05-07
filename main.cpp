@@ -96,9 +96,6 @@ bool doCommand(int &y, int &x, string * &invertory, int &itemsCarried, int &inve
   //else if (commands[0] == "examine")
   //  examine_command();
 
-  //else if (commands[0] == "open")
-  //  open_command();
-
   //else if (commands[0] == "use")
   //  use_command();
 
