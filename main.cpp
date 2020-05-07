@@ -12,7 +12,6 @@ using namespace std;
 
 
 void command(int &count, string commands[]){
-
   string command, word;
   bool x = true;
   while(x){
@@ -42,7 +41,7 @@ void command(int &count, string commands[]){
 
 }
 
-bool doCommand(int &y, int &x, string * &invertory, int &itemsCarried, int &inventorySize, struct listItems love[]){
+bool doCommand(int &y, int &x, string * &inventory, int &itemsCarried, int &inventorySize, struct listItems love[]){
   string commands[2];
   int count = 0;
 
@@ -58,10 +57,10 @@ bool doCommand(int &y, int &x, string * &invertory, int &itemsCarried, int &inve
     go_command(y, x, commands[1]);
 
   else if (commands[0] == "take")
-    take_command(y, x, invertory, commands[1], itemsCarried, inventorySize, love);
+    take_command(y, x, inventory, commands[1], itemsCarried, inventorySize, love);
 
   else if (commands[0] == "view")
-    view_invertory_command(invertory, inventorySize, commands[1]);
+    view_inventory_command(inventory, inventorySize, commands[1]);
   
   //else if (commands[0] == "examine")
   //  examine_command();
@@ -88,10 +87,10 @@ void game(int Yposition, int Xposition){
   love[8] = { 9, "torch", "mail" };
 
   int itemsCarried=0, inventorySize = 3;
-  string * invertory = new string [inventorySize];
-  while (doCommand(Yposition, Xposition, invertory, itemsCarried, inventorySize, love));
+  string * inventory = new string [inventorySize];
+  while (doCommand(Yposition, Xposition, inventory, itemsCarried, inventorySize, love));
 
-  delete []invertory;
+  delete []inventory;
 }
 int main(){
   srand(time(NULL));
