@@ -115,7 +115,7 @@ bool check_inventory(string itemTaken, string * invertory, int itemsCarried){
   return true;
 }
 
-void view_command(string * &invertory, int inventorySize, string itemViewed){
+void view_invertory_command(string * &invertory, int inventorySize, string itemViewed){
   if (itemViewed == "invertory"){
     if (inventorySize == 0){
       cout << "empty!" << endl;
@@ -126,5 +126,9 @@ void view_command(string * &invertory, int inventorySize, string itemViewed){
       }
       cout << endl;
     }
+  }
+  else{
+    cout << "Invalid input!";
+    cout << endl;
   }
 }
