@@ -113,8 +113,24 @@ int main(){
 
   wow.close();
   
-  mainMenu();
-  generateRoom(Yposition, Xposition);
-  game(Yposition, Xposition);
+  cout << endl;
+  cout << "Do you want to start the game? (yes/no)" << endl;
+  string startORnot;
+  getline(cin, startORnot);
+  while ((startORnot != "yes") || (startORnot != "no")){
+    cout << "Invalid answer, please input (yes) or (no)" << endl;
+    getline(cin, startORnot);
+  }
+  
+  if (startORnot == "yes"){
+    mainMenu();
+    generateRoom(Yposition, Xposition);
+    game(Yposition, Xposition);
+  }
+  else if (startORnot == "no"){
+    cout << "Bye-bye, " << name << endl;
+    cout << "See you at another time!" << endl;
+  }
+  
   return 0;
 }
