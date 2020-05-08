@@ -149,13 +149,26 @@ void item_function(string item, int roomNumber){
     cout << "This item cannot be examined" << endl;
 }
 
-void item_usage(string item, int room, bool &lastMission, string usedItems[], int &count){
+void item_usage(string item, int room, bool &lastMission, string usedItems[], int &count, int inventorySize){
   if ((item == "key") && (room == 6)){
-    usedItems[count] = "key";
-    count++;
-    cout << "The gate is unlocked" << endl;
-    cout << "But the climbing vine is blocking your way" << endl;
-    cout << "Maybe try to burn it?" << endl;
+    int requiredItem = 0;
+    for (int i = 0; i < inventorySize; i++){
+      a = inventory[i]
+      if (a == "phone" || a == "bullet" || a == "gun" || a == "torch" || a == "key" || a == "rope" || a == "knife")
+        requiredItem++;
+    }
+    if (requiredItem == 7){
+      usedItems[count] = "key";
+      count++;
+      cout << "The gate is unlocked" << endl;
+      cout << "But the climbing vine is blocking your way" << endl;
+      cout << "Maybe try to burn it?" << endl;
+    }
+    else{
+      cout << "It is better if you collect all this item before entering this ancient gate!" << endl;
+      cout << "                 key, torch, rope, knife, bullet, gun, phone" << endl;
+      cout << "                Otherwise, it will be hard for you to escape!" << endl;
+    }
   }
 
   else if ((item == "key") && (room != 6)){
@@ -266,7 +279,7 @@ void use_command(int y, int x, string itemUsed, string * &inventory, int invento
   else{
     for (int i=0; i<inventorySize; i++){
       if (itemUsed == inventory[i]){
-        item_usage(itemUsed, roomNumber, lastMission, usedItems, count);
+        item_usage(itemUsed, roomNumber, lastMission, usedItems, count, inventorySize);
         count1++;
         break;
       }
