@@ -27,7 +27,7 @@ bool last_Mission(){
     cout << "Your choice (gun / knife) : " << endl;
 
     cin >> choice;
-    if (choice == "gun")
+    if (choice == "gun"){
       cout << "\n===           You shot him right on his heart with the silicone bullet!            ===" << endl;
       cout << "===        He is dead now, but not forever, you still have to find the way out!    ===" << endl;
     }
