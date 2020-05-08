@@ -28,8 +28,8 @@ bool last_Mission(){
 
     cin >> choice;
     if (choice == "gun"){
-      cout << "===                  You loaded your gun with some bullets                   ===" << endl;
-      cout << "\n===        You shot him right on his heart with the silicone bullet!         ===" << endl;
+      cout << "\n===                  You loaded your gun with some bullets                   ===" << endl;
+      cout << "===        You shot him right on his heart with the silicone bullet!         ===" << endl;
       cout << "===    He is dead now, but not forever, you still have to find the way out!  ===" << endl;
     }
     else if (choice == "knife"){
@@ -61,8 +61,8 @@ bool last_Mission(){
     cout << "===                             The phone is on!                             ===" << endl;
     cout << "===                   You use your phone to call for help                    ===" << endl;
     cout << "=== Help service arrived 3 hours later, and you are back to your normal life!===" << endl;
-    cout << "====================             END GAME!             =========================" << endl;
-    cout << "===============      Thank you for playing the game!      ======================" << endl;
+    cout << "====================                END GAME!             ======================" << endl;
+    cout << "===============           Thank you for playing the game!      =================" << endl;
     string rating;
     cout << " - Please rate the game : (0-10) -" << endl;
     getline(cin, rating);
