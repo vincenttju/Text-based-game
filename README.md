@@ -1,6 +1,6 @@
 # Text-based Game
 
-Team Member:
+## **Team Member:**
 - VINCENT 3035663538
 - HAFI KHOIRUL 3035663021
 
@@ -51,7 +51,7 @@ There are 3 conditions:
 - Either the player wins by successfully collecting all required adventure items and finds the way out without being killed. 
 - Or the player loses when they are being killed by a monster in the game 
 
-# **List of features / functions that have been implemented:**
+## **List of features / functions that have been implemented:**
 1. Generation of random game sets or events
 - Using srand(time(NULL)) for:
   - Randomized the first room appearance
