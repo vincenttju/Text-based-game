@@ -42,11 +42,9 @@ void command(int &count, string commands[]){
 
 }
 
-bool doCommand(int &y, int &x, string * &inventory, int &itemsCarried, int &inventorySize, struct listItems love[]){
+bool doCommand(int &y, int &x, string * &inventory, int &itemsCarried, int &inventorySize, struct listItems love[], int &usedItemcount, string usedItems[], bool &lastMission){
   string commands[2];
-  int count = 0, usedItemCount = 0;
-  string usedItems[5];
-  bool lastMission = false;
+  int count = 0, 
   
   if (lastMission){
     string answer, choice, useRope;
@@ -139,9 +137,12 @@ void game(int Yposition, int Xposition){
   love[7] = { 8, "battery", "lock" };
   love[8] = { 9, "torch", "mail" };
 
-  int itemsCarried=0, inventorySize = 3;
+  int itemsCarried=0, inventorySize = 3, usedItemCount = 0;
   string * inventory = new string [inventorySize];
-  while (doCommand(Yposition, Xposition, inventory, itemsCarried, inventorySize, love));
+  string usedItems[5];
+  bool lastMission = false;
+  
+  while (doCommand(Yposition, Xposition, inventory, itemsCarried, inventorySize, love, usedItemCount,usedItems, lastMission));
 
   delete []inventory;
 }
