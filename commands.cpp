@@ -256,7 +256,7 @@ void examine_command(int y, int x, string itemExamined, string * &inventory, int
   }
 }
 
-void use_command(int y, int x, string itemUsed, string * &inventory, int inventorySize, bool lastMission){
+void use_command(int y, int x, string itemUsed, string * &inventory, int inventorySize, bool lastMission, string usedItems[], int count){
   int roomNumber = ((x+1)+(y*3));
   int count1 = 0;
   if (inventorySize == 0){
@@ -266,7 +266,7 @@ void use_command(int y, int x, string itemUsed, string * &inventory, int invento
   else{
     for (int i=0; i<inventorySize; i++){
       if (itemUsed == inventory[i]){
-        item_usage(itemUsed, roomNumber, lastMission);
+        item_usage(itemUsed, roomNumber, lastMission, usedItems, count);
         count1++;
         break;
       }
