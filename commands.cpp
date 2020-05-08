@@ -67,6 +67,7 @@ void take_command(int y, int x, string * &inventory, string itemTaken, int &item
       itemsCarried += 1;
       cout << itemTaken << " is taken into the inventory" << endl;
       cout << "Maybe try to examine or use it?" << endl;
+      cout << "Or maybe you want to go to other room?" << endl;
     }
   }
 
