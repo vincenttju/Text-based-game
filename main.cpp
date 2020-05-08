@@ -39,66 +39,12 @@ void command(int &count, string commands[]){
     if (nounCheck(commands))
       count = 0;
   }
-
 }
 
 bool doCommand(int &y, int &x, string * &inventory, int &itemsCarried, int &inventorySize, struct listItems love[], int &usedItemcount, string usedItems[], bool &lastMission){
   string commands[2];
-  int count = 0, 
-  
-  if (lastMission){
-    string answer, choice, useRope;
-    int counter = 0;
-    
-    cout << "The ancient gate closed right aways as you entered the room!" << endl;
-    cout << "There is a password door in front of you now, written:" << endl;
-    cout << "Please form a word using the 9 given characters throughout the mansion" << endl;
-    cout << "The 9 characters you got: D - R - A - E - N - E - T - U - V " << endl;
-    cout << "Input the words in lowercase!" << endl;
-    cout << "ANSWER:" << endl;
-    
-    cin >> answer;
-    while (answer != "adventure"){
-      cin >> answer;
-      counter++;
-    }
-    cout << "The password door is unlocked!" << endl;
-    cout << "You have tried " << counter << "times!" << endl;
-    cout << "As soon as you opened the door, a wild monster is coming in your way!" << endl;
-    cout << "What would you choose to kill him? (gun / knife)" << endl;
-    cout << "Your choice (gun / knife) : " << endl;
-    
-    cin >> choice;
-    if (choice == "gun")
-      cout << "You shot him right on his head!" << endl;
-    else if (choice == "knife"){
-      cout << "The monster is too fast to be striked by a knife." << endl;
-      cout << "You are killed instead!" << endl;
-      cout << "========= GAME OVER! =========" << endl;
-      return 0;
-    }
-    else{
-      cout << "You did not choose the right weapon" << endl;
-      cout << "The monster is too fast, you have no other opportunity" << endl;
-      cout << "You are killed instead!" << endl;
-      cout << "========= GAME OVER! =========" << endl;
-      return 0;
-    }
-    
-    cout << "You have escaped from the mansion! But you realised that you are on the second floor!" << endl;
-    cout << "Maybe try to use the rope that you got?" << endl;
-    getline(cin, useRope);
-    while (useRope != "use rope"){
-      getline(cin, useRope);
-      cout << "use rope" << endl;
-    }
-    cout << "You have finally escaped the mansion!" << endl;
-    cout << "You use your phone to call for help" << endl;
-    cout << "Help service arrived 3 hours later, and you are back to your normal life!" << endl;
-    cout << "============ END GAME! ============" << endl;
-    return 0;
-  }
-  
+  int count = 0;
+
   while (count != 2){
     count = 0;
     command(count, commands);
@@ -120,8 +66,63 @@ bool doCommand(int &y, int &x, string * &inventory, int &itemsCarried, int &inve
     examine_command(y, x, commands[1], inventory, inventorySize);
 
   else if (commands[0] == "use")
-    use_command(y, x, commands[1], inventory, inventorySize, lastMission, usedItems, usedItemCount);
+    use_command(y, x, commands[1], inventory, inventorySize, lastMission, usedItems, usedItemcount);
+  if (lastMission){
+    string answer, choice, useRope;
+    int counter = 0;
 
+    cout << "===      The ancient gate closed right aways as you entered the room!        ===" << endl;
+    cout << "===        There is a password door in front of you now, written:            ===" << endl;
+    cout << "===  Please form a word using the 9 given characters throughout the mansion  ===" << endl;
+    cout << "===       The 9 characters you got: D - R - A - E - N - E - T - U - V        ===" << endl;
+    cout << "===                      Input the word in lowercase!                        ===" << endl;
+    cout << "\nANSWER:" << endl;
+
+    cin >> answer;
+    while (answer != "adventure"){
+      cout << "Wrong answer, TRY AGAIN!" << endl;
+      cin >> answer;
+      counter++;
+    }
+    cout << "\n===                        The password door is unlocked!                    ===" << endl;
+    cout << "===                           You have tried " << counter + 1 << " times!                        ===" << endl;
+    cout << "===  As soon as you opened the door, a wild monster is coming in your way!   ===" << endl;
+    cout << "===             What would you choose to kill him? (gun / knife)             ===" << endl;
+    cout << "Your choice (gun / knife) : " << endl;
+
+    cin >> choice;
+    if (choice == "gun")
+      cout << "\n===                    You shot him right on his head!                       ===" << endl;
+    else if (choice == "knife"){
+      cout << "\n===               The monster is too fast to be striked by a knife.          ===" << endl;
+      cout << "===                              You are killed instead!                     ===" << endl;
+      cout << "====================               GAME OVER!               ====================" << endl;
+      return 0;
+    }
+    else{
+      cout << "\n===                    You did not choose the right weapon                   ===" << endl;
+      cout << "===         The monster is too fast, you have no other opportunity           ===" << endl;
+      cout << "===                            You are killed instead!                       ===" << endl;
+      cout << "====================             GAME OVER!                =====================" << endl;
+      return 0;
+    }
+
+    cout << "\n===                      You have escaped from the mansion!                  ===" << endl;
+    cout << "===               But you realised that you are on the second floor!         ==="<< endl;
+    cout << "===                   Maybe try to use the rope that you got?                ===" << endl;
+    getline(cin, useRope);
+    if (useRope != "use rope"){
+      while (useRope != "use rope"){
+        cout << "USE YOUR ROPE!" << endl;
+        getline(cin, useRope);
+      }
+    }
+    cout << "\n===                   You have finally escaped the mansion!                  ===" << endl;
+    cout << "===                    You use your phone to call for help                   ===" << endl;
+    cout << "=== Help service arrived 3 hours later, and you are back to your normal life!===" << endl;
+      cout << "====================             END GAME!               =====================" << endl;
+    return 0;
+  }
   return true;
 }
 
@@ -141,7 +142,7 @@ void game(int Yposition, int Xposition){
   string * inventory = new string [inventorySize];
   string usedItems[5];
   bool lastMission = false;
-  
+
   while (doCommand(Yposition, Xposition, inventory, itemsCarried, inventorySize, love, usedItemCount,usedItems, lastMission));
 
   delete []inventory;
@@ -150,43 +151,43 @@ int main(){
   srand(time(NULL));
   int Yposition = rand() % 3;
   int Xposition = rand() % 3;
-  
+
   string name;
   cout << "************ Welcome to One Night Game ************" << endl;
   cout << "Hello, please enter your name :" << endl;
   getline(cin, name);
   cout << "Hello " << name << ", good luck and have fun" << endl;
-  
+
   string gameRules;
   ifstream wow;
   wow.open("gameRules.txt");
-  while (getline(wow, gameRules)){    
+  while (getline(wow, gameRules)){
     cout << gameRules << endl;
   }
 
   wow.close();
-  
+
   cout << "Do you want to start the game? (yes/no)" << endl;
   string startORnot;
   getline(cin, startORnot);
-  
+
   if (startORnot == "yes"){
     mainMenu();
     generateRoom(Yposition, Xposition);
     game(Yposition, Xposition);
   }
-  
+
   else if (startORnot == "no"){
     cout << "Bye-bye, " << name << endl;
     cout << "See you at another time!" << endl;
-    
+
   }
-  
+
   else{
     cout << "Invalid answer! You have to input yes (lowercase) to continue" << endl;
     cout << "Bye-bye, " << name << "!" << endl;
-    
+
   }
-  
+
   return 0;
 }

@@ -76,18 +76,18 @@ void take_command(int y, int x, string * &inventory, string itemTaken, int &item
 }
 
 void item_function(string item, int roomNumber){
-  
+
   if ((item == "drawer") && (roomNumber == 3)){
     cout << "There is a notepad and a gun inside a drawer." << endl;
     cout << "You can take these items if you haven't." << endl;
     cout << "Maybe try to examine or use it?" << endl;
     cout << "There is \"T\" character written inside the drawer." << endl;
   }
-  
+
   else if ((item == "drawer") && (roomNumber != 3)){
     cout << " There is no drawer here! " << endl;
   }
-  
+
   else if (item == "letter"){
     cout << "________________________________________________" << endl;
     cout << endl;
@@ -134,22 +134,22 @@ void item_function(string item, int roomNumber){
     cout << " banana, apple, mango, and orange  " << endl;
     cout << " You cannot eat these garbage! " << endl;
   }
-  
+
   else if (item == "bullet"){
     cout << " It is a sillicon bullet!" << endl;
     cout << " This item is very useful, dont waste it!" << endl;
     cout << " Use this to load the gun!" << endl;
   }
-  
-  else if (item == "gun"){    
+
+  else if (item == "gun"){
     cout << "Use this to kill it!" << endl;
   }
-  
+
   else
     cout << "This item cannot be examined" << endl;
 }
 
-void item_usage(string item, int room, bool lastMission, string usedItems[], int &count){
+void item_usage(string item, int room, bool &lastMission, string usedItems[], int &count){
   if ((item == "key") && (room == 6)){
     usedItems[count] = "key";
     count++;
@@ -157,11 +157,11 @@ void item_usage(string item, int room, bool lastMission, string usedItems[], int
     cout << "But the climbing vine is blocking your way" << endl;
     cout << "Maybe try to burn it?" << endl;
   }
-  
+
   else if ((item == "key") && (room != 6)){
     cout << "You cannot use it here!" << endl;
   }
-  
+
   else if ((item == "torch") && (room == 6)){
     if (usedItems[0] == "key"){
       lastMission = true;
@@ -173,59 +173,59 @@ void item_usage(string item, int room, bool lastMission, string usedItems[], int
     else
       cout << "Use the key to open the gate first!" << endl;
   }
-  
+
   else if ((item == "torch") && (room != 6)){
     cout << "You will burn the entire room if you use it here." << endl;
     cout << "Try it in another room." << endl;
   }
-  
+
   else if (item == "flashlight"){
     cout << "The flashlight need a battery." << endl;
   }
-  
+
   else if (item == "battery"){
     cout << "You cannot use it, " << endl;
     cout << "The battery is dead." << endl;
   }
-  
+
   else if (item == "knife"){
     cout << "The knife has been possessed!" << endl;
     cout << "You have just lost your left arm!" << endl;
   }
-  
+
   else if ((item == "pan") && (room == 4)){
     cout << "You cannot use the pan" << endl;
     cout << "You dont know how to cook!" << endl;
   }
-  
+
   else if ((item == "pan") && (room != 4)){
     cout << "You cannot use it here" << endl;
   }
-  
+
   else if (item == "rope"){
     cout << "You cannot use it here" << endl;
   }
-  
+
   else if (item == "phone"){
     cout << "You cannot use it here" << endl;
     cout << "No signal inside this mansion." << endl;
   }
-  
+
   else if (item == "bullet"){
     cout << "It is a sillicon bullet!" << endl;
     cout << "This item is very useful, dont waste it!" << endl;
     cout << "Use this to load the gun!" << endl;
   }
-  
-  else if (item == "gun"){    
+
+  else if (item == "gun"){
     cout << "Use this to kill it!" << endl;
   }
-  
+
   else if (item == "lock"){
     cout << "The lock is cursed!" << endl;
     cout << "Suddenly, you feel extreme pain in your shoulder." << endl;
   }
-  
+
   else{
     cout << "The item cannot be used!" << endl;
   }
@@ -256,7 +256,7 @@ void examine_command(int y, int x, string itemExamined, string * &inventory, int
   }
 }
 
-void use_command(int y, int x, string itemUsed, string * &inventory, int inventorySize, bool lastMission, string usedItems[], int &count){
+void use_command(int y, int x, string itemUsed, string * &inventory, int inventorySize, bool &lastMission, string usedItems[], int &count){
   int roomNumber = ((x+1)+(y*3));
   int count1 = 0;
   if (inventorySize == 0){
