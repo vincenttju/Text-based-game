@@ -60,5 +60,9 @@ bool last_Mission(){
     cout << "=== Help service arrived 3 hours later, and you are back to your normal life!    ===" << endl;
     cout << "====================             END GAME!               ===========================" << endl;
     cout << "===============        Thank you for playing the game!        ======================" << endl;
+    string rating;
+    cout << " - Please rate the game : (0-10) -" << endl;
+    getline(cin, rating);
+    cout << " - Thank you for the rating, see you next time! -" << endl;
     return 0;
 }
