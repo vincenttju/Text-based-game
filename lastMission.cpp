@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include "lastMission.h"
+using namespace std;
 
 void last_Mission(){
     string answer, choice, useRope;
