@@ -210,6 +210,7 @@ void item_usage(string item, int room, bool &lastMission, string usedItems[], in
   else if (item == "picture"){
     cout << "The picture has been possessed!" << endl;
     cout << "You have just lost your left arm!" << endl;
+    cout << "Fortunately, you are not a lefty." << endl;
   }
 
   else if ((item == "pan") && (room == 4)){
@@ -238,6 +239,11 @@ void item_usage(string item, int room, bool &lastMission, string usedItems[], in
 
   else if (item == "gun"){
     cout << "Use this to kill it!" << endl;
+  }
+  
+  else if (item == "knife"){
+    cout << "You cannot use the ancient knife here!" << endl;
+    cout << "You can cut your own head if you use it uncarefully!" << endl;
   }
 
   else if (item == "lock"){
