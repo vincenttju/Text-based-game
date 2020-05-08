@@ -3,11 +3,11 @@
 #include "lastMission.h"
 using namespace std;
 
-void last_Mission(){
+bool last_Mission(){
     string answer, choice, useRope;
     int counter = 0;
 
-    cout << "===      The ancient gate closed right aways as you entered the room!        ===" << endl;
+    cout << "\n===      The ancient gate closed right aways as you entered the room!        ===" << endl;
     cout << "===        There is a password door in front of you now, written:            ===" << endl;
     cout << "===  Please form a word using the 9 given characters throughout the mansion  ===" << endl;
     cout << "===       The 9 characters you got: D - R - A - E - N - E - T - U - V        ===" << endl;

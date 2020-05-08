@@ -18,7 +18,7 @@ lastMission.o: lastMission.cpp lastMission.h
 main.o: main.cpp commands.h commandCheck.h struct.h generateRoom.h mainMenu.h lastMission.h
 	g++ $(FLAGS) -c $<
 
-main: generateRoom.o commands.o main.o commandCheck.o mainMenu.o
+main: generateRoom.o commands.o main.o commandCheck.o mainMenu.o lastMission.o
 	g++ $(FLAGS) $^ -o $@
 
 clean:

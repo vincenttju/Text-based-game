@@ -70,7 +70,7 @@ bool doCommand(int &y, int &x, string * &inventory, int &itemsCarried, int &inve
     use_command(y, x, commands[1], inventory, inventorySize, lastMission, usedItems, usedItemcount);
   
   if (lastMission)
-    last_Mission();
+    return last_Mission();
   
   return true;
 }
