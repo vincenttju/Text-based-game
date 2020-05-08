@@ -30,6 +30,7 @@ bool last_Mission(){
     if (choice == "gun")
       cout << "\n===           You shot him right on his heart with the silicone bullet!            ===" << endl;
       cout << "===        He is dead now, but not forever, you still have to find the way out!    ===" << endl;
+    }
     else if (choice == "knife"){
       cout << "\n===               The creature is too fast to be striked by a knife.          ===" << endl;
       cout << "===                              You are killed instead!                     ===" << endl;
