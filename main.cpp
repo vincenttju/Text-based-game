@@ -44,7 +44,8 @@ void command(int &count, string commands[]){
 
 bool doCommand(int &y, int &x, string * &inventory, int &itemsCarried, int &inventorySize, struct listItems love[]){
   string commands[2];
-  int count = 0;
+  int count = 0, usedItemCount = 0;
+  string usedItems[5];
   bool lastMission = false;
   
   if (lastMission){
@@ -121,10 +122,7 @@ bool doCommand(int &y, int &x, string * &inventory, int &itemsCarried, int &inve
     examine_command(y, x, commands[1], inventory, inventorySize);
 
   else if (commands[0] == "use")
-    use_command(y, x, commands[1], inventory, inventorySize, lastMission);
-
-  //else if (commands[0] == "answer")
-  //  answer_command();
+    use_command(y, x, commands[1], inventory, inventorySize, lastMission, usedItems, usedItemCount);
 
   return true;
 }
