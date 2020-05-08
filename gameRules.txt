@@ -1,11 +1,1 @@
 ====================================================
-GAME RULES :
-- You can input several commmands such as :
-    --> go north
-    --> take letter
-    --> examine letter
-    --> use key
-    --> view inventory
-- Input must be consist of 2 words and lowercase.
-- You can abandon the game by inputting "quit game".
-====================================================
