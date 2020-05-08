@@ -175,6 +175,7 @@ void item_usage(string item, int room, bool &lastMission, string usedItems[], in
       cout << "It is better if you collect all this item before entering this ancient gate!" << endl;
       cout << "                 key, torch, rope, knife, bullet, gun, phone" << endl;
       cout << "                Otherwise, it will be hard for you to escape!" << endl;
+      cout << "          Maybe try to view your inventory? Type \"view inventory\" "<< endl;
     }
   }
 
