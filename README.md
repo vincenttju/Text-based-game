@@ -13,7 +13,7 @@ One day, you wake up with a sick head lying on the floor in a dark room filled w
 
 Genre : Adventure,Survival, Mystery, Horror
 
-**Basic Game Rules:**
+**Basic Game Rules:** <br>		  	 	
 Objectives:
 - In this game, you will experience a number of situations, in the result of your commands and choices. You will be prompted to perform valid commands based on the current situation. If you performed an invalid command or unavailable situation, you will need to reenter your command. 
 - The player is required to find a way out from the map by collecting required adventure items, completing certain tasks, and solving riddles by collecting all of the characters scattered throughout the room. Throughout the game, the player need to input valid commands in the form of:
@@ -57,10 +57,9 @@ There are 3 conditions:
   - Randomized the first room appearance
   
 2. Data structures for storing game status
-- Using struct and array
-- Using 2D array of 3x3, to store possible rooms
-- Store item 
-- Riddle
+- Using struct array to store room number and specific items on those room (the struct is stored in struct.h) 
+- Using array to store user input ( commands )
+- Using array to store used items
 
 3. Dynamic memory management
 - Using dynamic array as inventory to store items collected througout the game
@@ -77,7 +76,10 @@ There are 3 conditions:
 - Using Makefile to ease compilation process
 
 ## **Compilation and execution instructions:**
-- in CS environment (x2go)
+- In academy server (x2go)
+- Make sure all of the files are there (24 files)
 - Compile by using "make main"
 - Execute by using "./main"
+- You can play the game now
+- Use "make tar" and "make clean" to remove unnecessary files
 
