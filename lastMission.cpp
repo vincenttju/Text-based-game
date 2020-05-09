@@ -10,16 +10,21 @@ bool last_Mission(){
     cout << "\n===      The ancient gate closed right aways as you entered the room!        ===" << endl;
     cout << "===        There is a password door in front of you now, written:            ===" << endl;
     cout << "===  Please form a word using the 9 given characters throughout the mansion  ===" << endl;
-    cout << "===       The 9 characters you got: D - R - A - E - N - E - T - U - V        ===" << endl;
+    cout << "===     Type \"hint\" if you want the 9 characters given to your screen      ===" << endl;
     cout << "===                      Input the word in lowercase!                        ===" << endl;
     cout << "\nANSWER:" << endl;
 
     cin >> answer;
     while (answer != "adventure"){
-      cout << "Wrong answer, TRY AGAIN!" << endl;
-      cin >> answer;
-      counter++;
+        cout << "Wrong answer, TRY AGAIN!" << endl;
+        cin >> answer;
+        counter++;
+        if (answer == "hint"){
+            cout << "===       The 9 characters you got: D - R - A - E - N - E - T - U - V        ===" << endl;
+            counter--;
+        }
     }
+    
     cout << "\n===                       The password door is unlocked!                     ===" << endl;
     cout << "===                          You have tried " << counter + 1 << " times!                         ===" << endl;
     cout << "===  As soon as you opened the door, a hell creature is coming in your way!  ===" << endl;
