@@ -3,7 +3,6 @@
 using namespace std;
 
 // This function output the first story in the beginning of the game
-
 void mainMenu(){
   string firstInput;
 
