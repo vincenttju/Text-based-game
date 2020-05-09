@@ -4,7 +4,6 @@
 - VINCENT 3035663538
 - HAFI KHOIRUL 3035663021
 
-## **Problem Statement:**
 
 ## **Game Description:**
 One Night is an uncompromising horror survival text-based game full of challenges and mystery. Feel the tense as you are trapped in a strange and gloomy world full of mysterious creatures, dangers, and surprises. Gather resources and clues to find your way out.
@@ -16,7 +15,7 @@ Genre : Adventure,Survival, Mystery, Horror
 **Basic Game Rules:** <br>		  	 	
 Objectives:
 - In this game, you will experience a number of situations, in the result of your commands and choices. You will be prompted to perform valid commands based on the current situation. If you performed an invalid command or unavailable situation, you will need to reenter your command. 
-- The player is required to find a way out from the map by collecting required adventure items, completing certain tasks, and solving riddles by collecting all of the characters scattered throughout the room. Throughout the game, the player need to input valid commands in the form of:
+- The player is required to find a way out from the map by collecting required adventure items, completing certain tasks, and solving riddle, you also need to find and remember all of the 9 characters scattered throughout the room (it will be form into a word consist of 9 letters). Throughout the game, the player need to input valid commands in the form of:
 
 ***COMMANDS OBJECT***  
 [The command should only consist of 2 lowercase words, "command" and "object", and separated by space “ “]
