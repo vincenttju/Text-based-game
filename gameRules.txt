@@ -1,6 +1,13 @@
 ====================================================
 GAME RULES :
-- You can input several commmands such as :
+- 7 important commands needed throughout the game:
+    --> go
+    --> take
+    --> use
+    --> examine
+    --> view
+    --> quit
+- You can input  such as :
     --> go north
     --> take letter
     --> examine letter
