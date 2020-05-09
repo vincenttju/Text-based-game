@@ -3,6 +3,7 @@
 #include "lastMission.h"
 using namespace std;
 
+// this function will output the last mission of the game
 bool last_Mission(){
     string answer, choice, useRope;
     int counter = 0;
