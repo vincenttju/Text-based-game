@@ -141,7 +141,10 @@ void item_function(string item, int roomNumber){
     cout << " This item is very useful, dont waste it!" << endl;
     cout << " Use this to load the gun!" << endl;
   }
-
+  
+  else if (item == "battery")
+     cout << "This is a phone batter" << endl;
+  
   else if (item == "phone")
     cout << "The phone is off, find the battery? " << endl;
   
@@ -208,7 +211,7 @@ void item_usage(string item, int room, bool &lastMission, string usedItems[], in
   }
 
   else if (item == "battery"){
-    cout << "This is a battery phone! " << endl;
+    cout << "Maybe we will need it later" << endl;
   }
 
   else if (item == "picture"){
