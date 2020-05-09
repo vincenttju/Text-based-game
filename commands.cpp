@@ -96,7 +96,7 @@ void item_function(string item, int roomNumber){
     cout << " IT IS ALWAYS WATCHING YOU! The bloody creature " << endl;
     cout << " will kill you in the blink of an eye. " << endl;
     cout << " Find  gun and the bullet, it will kill him " << endl;
-    cout << "Your next character is \"U\" " << endl;
+    cout << " Your next character is \"U\" " << endl;
     cout << "________________________________________________" << endl;
   }
 
@@ -109,7 +109,7 @@ void item_function(string item, int roomNumber){
     cout << "    I CAN FILL AN ENTIRE ROOM WITHOUT TAKING UP ANY SPACE. " << endl;
     cout << endl;
     cout << "    THE MORE OF THIS THERE IS, THE LESS YOU SEE." << endl;
-    cout << " \"N\" IS MY FAVOURITE CHARACTER!" << endl;
+    cout << "    \"N\" IS MY FAVOURITE CHARACTER!" << endl;
     cout << "___________________________________________________________" << endl;
   }
 
@@ -142,8 +142,11 @@ void item_function(string item, int roomNumber){
     cout << " Use this to load the gun!" << endl;
   }
 
+  else if (item == "phone")
+    cout << "The phone is off, find the battery? " << endl;
+  
   else if (item == "gun"){
-    cout << "Use this to kill it!" << endl;
+    cout << "Use this to kill it!, maybe you need some bullet to load it" << endl;
   }
   
   else if (item == "knife"){
@@ -205,8 +208,7 @@ void item_usage(string item, int room, bool &lastMission, string usedItems[], in
   }
 
   else if (item == "battery"){
-    cout << "You cannot use it, " << endl;
-    cout << "The battery is dead." << endl;
+    cout << "This is a battery phone! " << endl;
   }
 
   else if (item == "picture"){
