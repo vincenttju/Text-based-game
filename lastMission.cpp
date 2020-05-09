@@ -22,8 +22,8 @@ bool last_Mission(){
             continue;
         }
         else if (answer == "adventure"){
-            break;
             counter++;
+            break;
         }
         cout << "Wrong answer, TRY AGAIN!" << endl;
         counter++;
