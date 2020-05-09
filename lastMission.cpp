@@ -25,7 +25,7 @@ bool last_Mission(){
     }
     
     cout << "\n===                       The password door is unlocked!                     ===" << endl;
-    cout << "===                          You have tried " << counter + 1 << " times!                         ===" << endl;
+    cout << "===                          You have tried " << counter  << " times!                         ===" << endl;
     cout << "===  As soon as you opened the door, a hell creature is coming in your way!  ===" << endl;
     cout << "===             What would you choose to kill him? (gun / knife)             ===" << endl;
     cout << "Your choice (gun / knife) : " << endl;
