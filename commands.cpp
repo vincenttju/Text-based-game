@@ -5,9 +5,51 @@
 #include "struct.h"
 using namespace std;
 
+void go_command(int &y, int &x, string userInput);
+// x and y is the current coordinate of the user, it will be used to locate the current room number
+// the movement of the user will be according to userInput (north / west/ east/ south)
+// it will update the current location (move the user to another room)
+// then generate the room of the location using generateRoom() function
+
+void take_command(int y, int x, string * &inventory, string itemTaken, int &itemsCarried, int &inventorySize, listItems love[]);
+// x and y is the current coordinate of the user, it will be used to locate the current room number
+// itemsCarried and inventorySize will be needed in grow_inventory() function to increase the size of dynamic array inventory[]
+// this function will check if the itemTaken is in the current room (item information and location is stored in struct array listItems love[])
+// if the item is listed in the struct, the item will be stored in inventory dynamic array
+// the number of itemsCarried will be updated (added by 1)
+
+void item_usage(string item, int room, bool &lastMission, string usedItems[], int &count, int inventorySize, string inventory[]);
+// this function is used in use_command() function
+// usedItems[] will store item
+// this function will update lastMission be "true" after some condition
+// this function will also output the information of the item
+
+void use_command(int y, int x, string itemUsed, string * &inventory, int inventorySize, bool &lastMission, string usedItems[], int &count);
+// x and y is the current coordinate of the user, it will be used to locate the current room number
+// this function will check if itemUsed is in inventory dynamic array or not
+// if yes, item_usage() will be called to output the information
+
+void item_function(string item, int roomNumber);
+// this function is used in examine_command() function
+// this function will check if the item is in the correct roomNumber
+// this function also output the information of item being examined
+
+void examine_command(int y, int x, string itemExamined, string * &inventory, int inventorySize);
+// x and y is the current coordinate of the user, it will be used to locate the current room number
+// this function will check if itemExamined is in inventory dynamic array or not
+// if yes, item_function() will be called to output the information
+
+void view_inventory_command(string * &inventory, int inventorySize, string itemViewed);
+// this function is used to output the data stored in inventory (dynamic array)
+// this function can be used if itemViewed (the second word of the input / commands[1]) is "inventory"
+
 void grow_inventory(string * &inventory, int &inventorySize, int n);
+// this function will grow the size of inventory (dynamic array) by n
 
 bool check_inventory(string itemTaken, string * inventory, int itemsCarried);
+// this function is used in take_command() function for checking whether
+// the items (itemTaken) is in your inventory (inventory dynamic array) or not
+
 
 void go_command(int &y, int &x, string userInput){
   int roomNumber = ((x+1)+(y*3));
@@ -54,6 +96,7 @@ void go_command(int &y, int &x, string userInput){
   }
 }
 
+
 void take_command(int y, int x, string * &inventory, string itemTaken, int &itemsCarried, int &inventorySize, listItems love[])
 {
   int roomNumber = ((x)+(y*3));
@@ -70,11 +113,11 @@ void take_command(int y, int x, string * &inventory, string itemTaken, int &item
       cout << "Or maybe you want to go to other room?" << endl;
     }
   }
-
   else{
     cout << "invalid items!" << endl;
   }
 }
+
 
 void item_function(string item, int roomNumber){
 
@@ -263,6 +306,7 @@ void item_usage(string item, int room, bool &lastMission, string usedItems[], in
   }
 }
 
+
 void examine_command(int y, int x, string itemExamined, string * &inventory, int inventorySize){
   int count1=0;
   int roomNumber = ((x+1)+(y*3));
@@ -287,6 +331,7 @@ void examine_command(int y, int x, string itemExamined, string * &inventory, int
     cout << "You don't have this item in the inventory" << endl;
   }
 }
+
 
 void use_command(int y, int x, string itemUsed, string * &inventory, int inventorySize, bool &lastMission, string usedItems[], int &count){
   int roomNumber = ((x+1)+(y*3));
@@ -324,6 +369,7 @@ void grow_inventory(string * &inventory, int &inventorySize, int n){
   cout << "Inventory size increased" << endl;
 }
 
+
 bool check_inventory(string itemTaken, string * inventory, int itemsCarried){
   if (itemsCarried == 0)
     return true;
@@ -337,6 +383,7 @@ bool check_inventory(string itemTaken, string * inventory, int itemsCarried){
   }
   return true;
 }
+
 
 void view_inventory_command(string * &inventory, int inventorySize, string itemViewed){
   if (itemViewed == "inventory"){
