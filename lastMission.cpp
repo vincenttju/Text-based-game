@@ -21,6 +21,10 @@ bool last_Mission(){
             cout << "===       The 9 characters you got: D - R - A - E - N - E - T - U - V        ===" << endl;
             continue;
         }
+        else if (answer == "adventure"){
+            break;
+            counter++
+        }
         cout << "Wrong answer, TRY AGAIN!" << endl;
         counter++;
     }
