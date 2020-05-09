@@ -143,7 +143,7 @@ void item_function(string item, int roomNumber){
   }
   
   else if (item == "battery")
-     cout << "This is a phone batter" << endl;
+     cout << "This is a phone battery" << endl;
   
   else if (item == "phone")
     cout << "The phone is off, find the battery? " << endl;
