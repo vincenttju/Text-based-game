@@ -201,7 +201,7 @@ void item_function(string item, int roomNumber){
   }
 
   else
-    cout << "This item cannot be examined" << endl;
+    cout << "Unable to examined it! Maybe try use it?" << endl;
 }
 
 
@@ -302,7 +302,7 @@ void item_usage(string item, int room, bool &lastMission, string usedItems[], in
   }
 
   else{
-    cout << "The item cannot be used!" << endl;
+    cout << "Unable to use it! Maybe try examine it?" << endl;
   }
 }
 
